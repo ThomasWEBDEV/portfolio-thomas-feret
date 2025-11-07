@@ -34,5 +34,29 @@ export const projects = [
     github: "https://github.com/thomasferet/api-rest",
     demo: "https://api-documentation.com",
     image: "/images/project3.jpg"
+  },
+  {
+    id: 4,
+    slug: "app-mobile",
+    title: "App Mobile E-commerce",
+    description: "Application mobile cross-platform pour e-commerce",
+    longDescription: "Application mobile React Native avec panier, favoris, notifications push et paiement intégré pour boutique en ligne.",
+    stack: ["React Native", "Redux", "Firebase", "Stripe"],
+    role: "Développeur Mobile",
+    github: "https://github.com/thomasferet/mobile-app",
+    demo: "https://app-store-link.com",
+    image: "/images/project4.jpg"
+  },
+  {
+    id: 5,
+    slug: "chatbot-ia",
+    title: "Chatbot IA Support",
+    description: "Chatbot intelligent pour support client automatisé",
+    longDescription: "Chatbot utilisant l'IA pour répondre automatiquement aux questions clients avec intégration CRM et analytics.",
+    stack: ["Python", "OpenAI API", "FastAPI", "Redis"],
+    role: "Développeur IA/Backend",
+    github: "https://github.com/thomasferet/chatbot",
+    demo: "https://chatbot-demo.vercel.app",
+    image: "/images/project5.jpg"
   }
 ];
