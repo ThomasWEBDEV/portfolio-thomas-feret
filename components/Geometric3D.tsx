@@ -4,59 +4,67 @@ import { motion } from "framer-motion";
 export default function Geometric3D() {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
-      {/* Cube 3D rotatif principal */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 perspective-1000">
-        <motion.div
-          animate={{ 
-            rotateX: [0, 360],
-            rotateY: [0, 360],
-          }}
-          transition={{ 
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="transform-style-3d w-64 h-64"
-        >
-          <div className="absolute w-64 h-64 border-2 border-sky-400/30 bg-sky-500/10 transform rotate-y-0" />
-          <div className="absolute w-64 h-64 border-2 border-sky-400/30 bg-sky-500/10 transform rotate-y-90" />
-          <div className="absolute w-64 h-64 border-2 border-sky-400/30 bg-sky-500/10 transform rotate-x-90" />
-        </motion.div>
+      {/* Grille de points animés */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              opacity: [0.2, 1, 0.2],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
       </div>
 
-      {/* Pyramides flottantes */}
-      <motion.div
-        animate={{ 
-          y: [0, -30, 0],
-          rotate: [0, 180, 360],
-        }}
-        transition={{ 
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/4 left-1/4"
-      >
-        <div className="w-32 h-32 border-l-[60px] border-r-[60px] border-b-[100px] border-l-transparent border-r-transparent border-b-sky-400/20" />
-      </motion.div>
+      {/* Lignes géométriques animées */}
+      <svg className="absolute inset-0 w-full h-full">
+        <motion.line
+          x1="10%" y1="10%" x2="30%" y2="30%"
+          stroke="rgba(255,255,255,0.1)"
+          strokeWidth="1"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        />
+        <motion.line
+          x1="70%" y1="20%" x2="90%" y2="40%"
+          stroke="rgba(255,255,255,0.1)"
+          strokeWidth="1"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
+        />
+        <motion.line
+          x1="20%" y1="70%" x2="40%" y2="90%"
+          stroke="rgba(255,255,255,0.1)"
+          strokeWidth="1"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2.5, repeat: Infinity, repeatType: "reverse", delay: 1 }}
+        />
+      </svg>
 
+      {/* Cercles concentriques */}
       <motion.div
-        animate={{ 
-          y: [0, 30, 0],
-          rotate: [360, 180, 0],
-        }}
-        transition={{ 
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute bottom-1/4 right-1/4"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >
-        <div className="w-32 h-32 border-l-[60px] border-r-[60px] border-b-[100px] border-l-transparent border-r-transparent border-b-sky-400/20" />
+        <div className="w-96 h-96 border border-white/5 rounded-full" />
+        <div className="absolute inset-8 border border-white/10 rounded-full" />
+        <div className="absolute inset-16 border border-white/5 rounded-full" />
       </motion.div>
-
-      {/* Grille de fond */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(56,189,248,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
     </div>
   );
 }
