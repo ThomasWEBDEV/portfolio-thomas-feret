@@ -5,23 +5,17 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#faf9f5' }}>
+    <main className="min-h-screen" style={{ backgroundColor: "#faf9f5" }}>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden" style={{ backgroundColor: '#faf9f5' }}>
-        {/* Motif géométrique très subtil */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}></div>
-        </div>
-        
-        <motion.div 
+      <section className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden" style={{ backgroundColor: "#faf9f5" }}>
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto text-center z-10"
         >
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
@@ -29,8 +23,8 @@ export default function Home() {
           >
             Thomas Feret
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
@@ -38,21 +32,21 @@ export default function Home() {
           >
             Développeur Web Full-stack
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 1 }}
             className="flex gap-4 justify-center flex-wrap"
           >
-            <Link 
-              href="#projets" 
+            <Link
+              href="#projets"
               className="px-6 py-3 bg-black text-white text-base rounded-lg hover:bg-gray-800 transition-all font-normal"
             >
               Voir mes projets
             </Link>
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="px-6 py-3 border border-gray-400 text-black text-base rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all font-normal"
             >
               Me contacter
@@ -62,12 +56,12 @@ export default function Home() {
       </section>
 
       {/* Section Projets */}
-      <section id="projets" className="py-20 px-8" style={{ backgroundColor: '#faf9f5' }}>
+      <section id="projets" className="py-20 px-8" style={{ backgroundColor: "#faf9f5" }}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-medium text-center mb-16 text-black">
             Projets
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -99,18 +93,20 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="flex gap-3 pt-4">
-                    
+                    <a
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-black hover:text-gray-600 underline underline-offset-4 text-sm">
+                      className="text-black hover:text-gray-600 underline underline-offset-4 text-sm"
+                    >
                       Voir le projet
                     </a>
-                    
+                    <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-black underline underline-offset-4 text-sm">
+                      className="text-gray-500 hover:text-black underline underline-offset-4 text-sm"
+                    >
                       GitHub
                     </a>
                   </div>
@@ -137,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Section Contact */}
-      <section id="contact" className="py-20 px-8" style={{ backgroundColor: '#faf9f5' }}>
+      <section id="contact" className="py-20 px-8" style={{ backgroundColor: "#faf9f5" }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-medium mb-8 text-black">
             Contact
@@ -146,23 +142,26 @@ export default function Home() {
             Vous avez un projet ? Discutons-en.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a 
-              href="mailto:contact@thomasferet.dev" 
-              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
+            <a
+              href="mailto:contact@thomasferet.dev"
+              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
+            >
               Email
             </a>
-            <a 
-              href="https://github.com/thomasferet" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
+            <a
+              href="https://github.com/thomasferet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all"
+            >
               GitHub
             </a>
-            <a 
-              href="https://linkedin.com/in/thomasferet" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
+            <a
+              href="https://linkedin.com/in/thomasferet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all"
+            >
               LinkedIn
             </a>
           </div>
