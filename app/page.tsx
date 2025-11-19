@@ -148,24 +148,21 @@ export default function Home() {
           <div className="flex gap-4 justify-center flex-wrap">
             <a 
               href="mailto:contact@thomasferet.dev" 
-              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
-            >
+              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
               Email
             </a>
             <a 
               href="https://github.com/thomasferet" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all"
-            >
+              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
               GitHub
             </a>
             <a 
               href="https://linkedin.com/in/thomasferet" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all"
-            >
+              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
               LinkedIn
             </a>
           </div>
