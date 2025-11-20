@@ -2,13 +2,15 @@
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
+import FloatingCode from "@/components/FloatingCode";
 
 export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#faf9f5" }}>
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden" style={{ backgroundColor: "#faf9f5" }}>
-
+        <FloatingCode />
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,8 +18,8 @@ export default function Home() {
           className="max-w-5xl mx-auto text-center z-10"
         >
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
             className="text-7xl md:text-8xl font-medium mb-6 text-black tracking-tight"
           >
@@ -93,7 +95,7 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="flex gap-3 pt-4">
-                    <a
+                    
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -101,7 +103,7 @@ export default function Home() {
                     >
                       Voir le projet
                     </a>
-                    <a
+                    
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -142,13 +144,13 @@ export default function Home() {
             Vous avez un projet ? Discutons-en.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a
+            
               href="mailto:contact@thomasferet.dev"
               className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
             >
               Email
             </a>
-            <a
+            
               href="https://github.com/thomasferet"
               target="_blank"
               rel="noopener noreferrer"
@@ -156,7 +158,7 @@ export default function Home() {
             >
               GitHub
             </a>
-            <a
+            
               href="https://linkedin.com/in/thomasferet"
               target="_blank"
               rel="noopener noreferrer"
