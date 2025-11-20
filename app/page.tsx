@@ -7,10 +7,9 @@ import FloatingCode from "@/components/FloatingCode";
 export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#faf9f5" }}>
-      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden" style={{ backgroundColor: "#faf9f5" }}>
         <FloatingCode />
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +56,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Section Projets */}
       <section id="projets" className="py-20 px-8" style={{ backgroundColor: "#faf9f5" }}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-medium text-center mb-16 text-black">
@@ -86,29 +84,16 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.stack.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm"
-                      >
+                      <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm">
                         {tech}
                       </span>
                     ))}
                   </div>
                   <div className="flex gap-3 pt-4">
-                    
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-gray-600 underline underline-offset-4 text-sm"
-                    >
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 underline underline-offset-4 text-sm">
                       Voir le projet
                     </a>
-                    
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-black underline underline-offset-4 text-sm"
-                    >
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black underline underline-offset-4 text-sm">
                       GitHub
                     </a>
                   </div>
@@ -119,7 +104,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section À Propos */}
       <section id="about" className="py-20 px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-medium mb-8 text-black">
@@ -134,7 +118,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Contact */}
       <section id="contact" className="py-20 px-8" style={{ backgroundColor: "#faf9f5" }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-medium mb-8 text-black">
@@ -144,26 +127,13 @@ export default function Home() {
             Vous avez un projet ? Discutons-en.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            
-              href="mailto:contact@thomasferet.dev"
-              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
-            >
+            <a href="mailto:contact@thomasferet.dev" className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
               Email
             </a>
-            
-              href="https://github.com/thomasferet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all"
-            >
+            <a href="https://github.com/thomasferet" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
               GitHub
             </a>
-            
-              href="https://linkedin.com/in/thomasferet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all"
-            >
+            <a href="https://linkedin.com/in/thomasferet" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
               LinkedIn
             </a>
           </div>
