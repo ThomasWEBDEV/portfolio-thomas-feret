@@ -3,6 +3,7 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import FloatingCode from "@/components/FloatingCode";
+import TypeWriter from "@/components/TypeWriter";
 
 export default function Home() {
   return (
@@ -25,14 +26,14 @@ export default function Home() {
             Thomas Feret
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="text-xl md:text-2xl mb-8 text-gray-700 font-light"
+            className="mb-8"
           >
-            Développeur Web Full-stack
-          </motion.p>
+            <TypeWriter />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
