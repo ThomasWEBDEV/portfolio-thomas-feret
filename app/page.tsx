@@ -1,55 +1,86 @@
 "use client";
 import Link from "next/link";
-import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
-import FloatingCode from "@/components/FloatingCode";
-import TypeWriter from "@/components/TypeWriter";
+import { projects } from "@/data/projects";
 
 export default function Home() {
+  const codeSnippets = [
+    "const portfolio = { passion: 'infinite' };",
+    "function createSolution() { return innovation; }",
+    "app.use(creativity).deploy(excellence);",
+    "<Component style={{ modern: true }} />",
+    "SELECT * FROM skills WHERE level = 'expert';",
+  ];
+
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#faf9f5" }}>
-      <section className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden" style={{ backgroundColor: "#faf9f5" }}>
-        <FloatingCode />
+    <main className="min-h-screen bg-[#fcfcfc]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-8">
+        {/* Animations de code flottant */}
+        <div className="absolute inset-0 overflow-hidden opacity-[0.03]">
+          {codeSnippets.map((code, index) => (
+            <motion.div
+              key={index}
+              initial={{ x: Math.random() * window.innerWidth, y: -50 }}
+              animate={{
+                y: window.innerHeight + 50,
+                x: Math.random() * window.innerWidth,
+              }}
+              transition={{
+                duration: 15 + Math.random() * 10,
+                repeat: Infinity,
+                delay: index * 2,
+                ease: "linear",
+              }}
+              className="absolute text-[#050505] text-xs md:text-sm font-mono whitespace-nowrap"
+            >
+              {code}
+            </motion.div>
+          ))}
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto text-center z-10"
+          className="text-center z-10"
         >
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 1 }}
-            className="text-7xl md:text-8xl font-medium mb-6 text-black tracking-tight"
-          >
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-[#050505]">
             Thomas Feret
-          </motion.h1>
-
-          <motion.div
+          </h1>
+          
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
-            className="mb-8"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-xl md:text-2xl mb-4 text-[#050505]/80"
           >
-            <TypeWriter />
-          </motion.div>
-
-          <motion.div
+            Développeur Web Full-stack
+          </motion.p>
+          
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 1 }}
-            className="flex gap-4 justify-center flex-wrap"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg text-[#050505]/60 mb-8 max-w-2xl mx-auto"
+          >
+            Créateur d'applications modernes avec Next.js, TypeScript et Ruby on Rails
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="flex gap-4 justify-center"
           >
             <Link
               href="#projets"
-              className="px-6 py-3 bg-black text-white text-base rounded-lg hover:bg-gray-800 transition-all font-normal"
+              className="px-6 py-3 bg-[#050505] text-[#fcfcfc] text-base rounded-lg hover:bg-[#050505]/90 transition-all font-normal"
             >
               Voir mes projets
             </Link>
             <Link
               href="#contact"
-              className="px-6 py-3 border border-gray-400 text-black text-base rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all font-normal"
+              className="px-6 py-3 border border-[#050505]/20 text-[#050505] text-base rounded-lg hover:border-[#050505]/40 hover:bg-[#f7f7f7] transition-all font-normal"
             >
               Me contacter
             </Link>
@@ -57,9 +88,9 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="projets" className="py-20 px-8" style={{ backgroundColor: "#faf9f5" }}>
+      <section id="projets" className="py-20 px-8 bg-[#f7f7f7]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-medium text-center mb-16 text-black">
+          <h2 className="text-4xl md:text-5xl font-medium text-center mb-16 text-[#050505]">
             Projets
           </h2>
 
@@ -71,30 +102,30 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 border border-gray-200 hover:border-gray-400 hover:shadow-sm transition-all"
+                className="bg-[#fcfcfc] rounded-xl p-8 border border-[#050505]/10 hover:border-[#050505]/20 hover:shadow-lg transition-all"
               >
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-medium text-black">
+                  <h3 className="text-2xl font-medium text-[#050505]">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#050505]/70 leading-relaxed">
                     {project.description}
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-[#050505]/50">
                     {project.role}
                   </p>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.stack.slice(0, 3).map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm">
+                      <span key={tech} className="px-3 py-1 bg-[#f7f7f7] text-[#050505]/80 rounded-md text-sm">
                         {tech}
                       </span>
                     ))}
                   </div>
                   <div className="flex gap-3 pt-4">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 underline underline-offset-4 text-sm">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-[#050505] hover:text-[#050505]/70 underline underline-offset-4 text-sm">
                       Voir le projet
                     </a>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black underline underline-offset-4 text-sm">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[#050505]/60 hover:text-[#050505] underline underline-offset-4 text-sm">
                       GitHub
                     </a>
                   </div>
@@ -105,36 +136,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-8 bg-white">
+      <section id="about" className="py-20 px-8 bg-[#fcfcfc]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-medium mb-8 text-black">
+          <h2 className="text-4xl md:text-5xl font-medium mb-8 text-[#050505]">
             À Propos
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+          <p className="text-[#050505]/70 text-lg leading-relaxed mb-6">
             Diplômé du Wagon (RNCP niveau 6), je suis un développeur full-stack passionné par les technologies modernes.
           </p>
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-[#050505]/70 text-lg leading-relaxed">
             Basé à Lamballe et mobile sur Rennes, je crée des applications web performantes et innovantes.
           </p>
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-8" style={{ backgroundColor: "#faf9f5" }}>
+      <section id="contact" className="py-20 px-8 bg-[#f7f7f7]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-medium mb-8 text-black">
+          <h2 className="text-4xl md:text-5xl font-medium mb-8 text-[#050505]">
             Contact
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-[#050505]/70 mb-8">
             Vous avez un projet ? Discutons-en.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="mailto:contact@thomasferet.dev" className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
+            <a href="mailto:contact@thomasferet.dev" className="px-6 py-3 bg-[#050505] text-[#fcfcfc] rounded-lg hover:bg-[#050505]/90 transition-all">
               Email
             </a>
-            <a href="https://github.com/thomasferet" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
+            <a href="https://github.com/thomasferet" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-[#050505]/20 text-[#050505] rounded-lg hover:border-[#050505]/40 hover:bg-[#fcfcfc] transition-all">
               GitHub
             </a>
-            <a href="https://linkedin.com/in/thomasferet" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-gray-400 text-black rounded-lg hover:border-gray-600 hover:bg-white/50 transition-all">
+            <a href="https://linkedin.com/in/thomasferet" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-[#050505]/20 text-[#050505] rounded-lg hover:border-[#050505]/40 hover:bg-[#fcfcfc] transition-all">
               LinkedIn
             </a>
           </div>
