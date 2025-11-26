@@ -4,37 +4,51 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 
 export default function Home() {
-  const codeSnippets = [
-    "const portfolio = { passion: 'infinite' };",
-    "function createSolution() { return innovation; }",
-    "app.use(creativity).deploy(excellence);",
-    "<Component style={{ modern: true }} />",
-    "SELECT * FROM skills WHERE level = 'expert';",
-  ];
-
   return (
     <main className="min-h-screen bg-[#fcfcfc]">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-8">
-        {/* Animations de code flottant */}
-        <div className="absolute inset-0 overflow-hidden opacity-[0.03]">
-          {codeSnippets.map((code, index) => (
+        {/* Arrière-plan 3D */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="perspective-1000">
             <motion.div
-              key={index}
-              initial={{ x: Math.random() * window.innerWidth, y: -50 }}
-              animate={{
-                y: window.innerHeight + 50,
-                x: Math.random() * window.innerWidth,
+              animate={{ 
+                rotateX: [0, 360],
+                rotateY: [0, 360],
               }}
               transition={{
-                duration: 15 + Math.random() * 10,
+                duration: 20,
                 repeat: Infinity,
-                delay: index * 2,
-                ease: "linear",
+                ease: "linear"
               }}
-              className="absolute text-[#050505] text-xs md:text-sm font-mono whitespace-nowrap"
+              className="transform-style-3d relative w-64 h-64"
             >
-              {code}
+              {/* Faces du cube */}
+              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-br from-[#050505]/5 to-[#050505]/10 border border-[#050505]/10 rotate-y-0"></div>
+              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-br from-[#050505]/5 to-[#050505]/10 border border-[#050505]/10 rotate-y-90"></div>
+              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-br from-[#050505]/5 to-[#050505]/10 border border-[#050505]/10 rotate-x-90"></div>
             </motion.div>
+          </div>
+          
+          {/* Particules flottantes */}
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-[#050505]/10 rounded-full"
+              animate={{
+                x: [0, 100, 0, -100, 0],
+                y: [0, -100, 0, 100, 0],
+                z: [0, 50, 0, -50, 0],
+              }}
+              transition={{
+                duration: 10 + i * 2,
+                repeat: Infinity,
+                delay: i * 0.5,
+              }}
+              style={{
+                left: `${20 + i * 15}%`,
+                top: `${30 + i * 10}%`,
+              }}
+            />
           ))}
         </div>
 
