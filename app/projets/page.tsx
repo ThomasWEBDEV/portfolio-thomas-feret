@@ -1,18 +1,17 @@
 "use client";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-[#fcfcfc]">
-      <section className="pt-24 pb-20 px-8">
+    <main className="min-h-screen bg-[#fcfcfc] pt-20">
+      <section className="py-20 px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-center mb-4 text-[#050505]">
             Mes Projets
