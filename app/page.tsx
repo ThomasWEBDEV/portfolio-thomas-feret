@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
@@ -61,14 +62,24 @@ export default function Home() {
             Thomas Feret
           </h1>
           
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl md:text-2xl mb-4 text-[#050505]/80"
-          >
-            Développeur Web Full-stack
-          </motion.p>
+          <div className="text-xl md:text-2xl mb-4 text-[#050505]/80 h-8">
+            <Typewriter
+              options={{
+                strings: [
+                  'Développeur Web Full-stack',
+                  'Expert Next.js & TypeScript',
+                  'Créateur d\'interfaces modernes',
+                  'Passionné Ruby on Rails',
+                  'Architecte d\'applications web'
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                deleteSpeed: 30,
+                pauseFor: 2000,
+              }}
+            />
+          </div>
           
           <motion.p
             initial={{ opacity: 0 }}
