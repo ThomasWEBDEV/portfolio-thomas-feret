@@ -76,6 +76,10 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  
+  /* Polices personnalisées */
+  --font-vend-sans: 'Vend Sans', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
 }
 
 .dark {
@@ -121,25 +125,14 @@
   }
 }
 
-/* Styles pour la 3D */
-.perspective-1000 {
-  perspective: 1000px;
+/* Classes utilitaires pour les polices */
+.font-vend-sans {
+  font-family: var(--font-vend-sans);
+  font-optical-sizing: auto;
 }
 
-.transform-style-3d {
-  transform-style: preserve-3d;
-}
-
-.rotate-y-0 {
-  transform: rotateY(0deg) translateZ(128px);
-}
-
-.rotate-y-90 {
-  transform: rotateY(90deg) translateZ(128px);
-}
-
-.rotate-x-90 {
-  transform: rotateX(90deg) translateZ(128px);
+.font-roboto {
+  font-family: var(--font-roboto);
 }
 
 /* Styles pour la 3D */
