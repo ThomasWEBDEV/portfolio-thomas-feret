@@ -46,117 +46,88 @@ export default function Header() {
 
   return (
     <>
-      {/* Barre de navigation agrandie de 50% */}
-      <div className="fixed top-4 left-4 right-4 z-50">
-        <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-lg">
-          <div className="flex items-center justify-between px-12 h-22"> {/* h-16 → h-24 */}
-
-            {/* Logo TF agrandi */}
-            <Link href="/" className="relative">
-              <motion.div
-                className="relative"
-                whileHover={{ scale: 1.05 }}
+      {/* Bouton Menu flottant en haut à droite */}
+      <div className="fixed top-8 right-8 z-50">
+        <motion.button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="relative group"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <div className="relative w-[72px] h-[72px]">
+            {/* Cercle de progression du scroll */}
+            <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none">
+              <circle
+                cx="36"
+                cy="36"
+                r="34"
+                stroke="#eae8da"
+                strokeWidth="1"
+                fill="none"
+                opacity="0.3"
+              />
+              <motion.circle
+                cx="36"
+                cy="36"
+                r="34"
+                stroke="#e15e4c"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
                 style={{
-                  x: useTransform(x, (value) => (value - 100) * 0.01),
-                  y: useTransform(y, (value) => (value - 100) * 0.01),
+                  pathLength: scrollYProgress,
+                  strokeDasharray: "1 1",
                 }}
-              >
-                <div className="text-4xl font-bold text-[#050505]"> {/* text-2xl → text-4xl */}
-                  TF
-                </div>
-                {/* Indicateur de page active */}
-                <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#050505]"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: pathname === "/" ? 1 : 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.div>
-            </Link>
+              />
+            </svg>
 
-            {/* Bouton Menu agrandi */}
-            <motion.button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="relative group"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="relative w-[72px] h-[72px]"> {/* w-12 h-12 → w-18 h-18 (72px) */}
-                {/* Cercle de progression du scroll */}
-                <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none">
-                  <circle
-                    cx="36"
-                    cy="36"
-                    r="34"
-                    stroke="#050505"
-                    strokeWidth="1"
-                    fill="none"
-                    opacity="0.1"
-                  />
-                  <motion.circle
-                    cx="36"
-                    cy="36"
-                    r="34"
-                    stroke="#050505"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    style={{
-                      pathLength: scrollYProgress,
-                      strokeDasharray: "1 1",
-                    }}
-                  />
-                </svg>
+            {/* Cercle magnétique avec nouvelles couleurs */}
+            <motion.div
+              className="absolute inset-0 bg-[#e15e4c] rounded-full"
+              style={{
+                x: useTransform(x, (value) => (value - windowWidth + 100) * 0.02),
+                y: useTransform(y, (value) => (value - 100) * 0.02),
+              }}
+            />
 
-                {/* Cercle magnétique */}
-                <motion.div
-                  className="absolute inset-0 bg-[#050505] rounded-full"
-                  style={{
-                    x: useTransform(x, (value) => (value - windowWidth + 100) * 0.02),
-                    y: useTransform(y, (value) => (value - 100) * 0.02),
-                  }}
-                />
+            {/* Lignes du menu burger */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none">
+              <motion.span
+                animate={{
+                  rotate: isExpanded ? 45 : 0,
+                  y: isExpanded ? 0 : -8,
+                }}
+                className="w-8 h-0.5 bg-[#eae8da] block"
+              />
+              <motion.span
+                animate={{
+                  opacity: isExpanded ? 0 : 1,
+                }}
+                className="w-8 h-0.5 bg-[#eae8da] block mt-2"
+              />
+              <motion.span
+                animate={{
+                  rotate: isExpanded ? -45 : 0,
+                  y: isExpanded ? -10 : 0,
+                }}
+                className="w-8 h-0.5 bg-[#eae8da] block mt-2"
+              />
+            </div>
 
-                {/* Lignes du menu burger agrandies */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none">
-                  <motion.span
-                    animate={{
-                      rotate: isExpanded ? 45 : 0,
-                      y: isExpanded ? 0 : -8,
-                    }}
-                    className="w-8 h-0.5 bg-[#fcfcfc] block" // w-5 → w-8
-                  />
-                  <motion.span
-                    animate={{
-                      opacity: isExpanded ? 0 : 1,
-                    }}
-                    className="w-8 h-0.5 bg-[#fcfcfc] block mt-2" // mt-1 → mt-2
-                  />
-                  <motion.span
-                    animate={{
-                      rotate: isExpanded ? -45 : 0,
-                      y: isExpanded ? -10 : 0,
-                    }}
-                    className="w-8 h-0.5 bg-[#fcfcfc] block mt-2"
-                  />
-                </div>
-
-                {/* Pulsation au hover */}
-                <motion.div
-                  className="absolute inset-0 bg-[#050505]/20 rounded-full pointer-events-none"
-                  animate={{
-                    scale: isExpanded ? [1, 1.3, 1] : 1,
-                  }}
-                  transition={{
-                    duration: 1,
-                    repeat: isExpanded ? Infinity : 0,
-                    repeatType: "loop",
-                  }}
-                />
-              </div>
-            </motion.button>
+            {/* Pulsation au hover */}
+            <motion.div
+              className="absolute inset-0 bg-[#e15e4c]/20 rounded-full pointer-events-none"
+              animate={{
+                scale: isExpanded ? [1, 1.3, 1] : 1,
+              }}
+              transition={{
+                duration: 1,
+                repeat: isExpanded ? Infinity : 0,
+                repeatType: "loop",
+              }}
+            />
           </div>
-        </div>
+        </motion.button>
       </div>
 
       {/* Overlay de fond pour le menu */}
@@ -166,11 +137,11 @@ export default function Header() {
           opacity: isExpanded ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
-        className={`fixed inset-0 bg-[#fcfcfc]/80 backdrop-blur-sm z-40 ${isExpanded ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`fixed inset-0 bg-[#203270]/95 backdrop-blur-sm z-40 ${isExpanded ? "pointer-events-auto" : "pointer-events-none"}`}
         onClick={() => setIsExpanded(false)}
       />
 
-      {/* Navigation Orbitale - position ajustée pour le bouton plus grand */}
+      {/* Navigation Orbitale */}
       {navItems.map((item, index) => (
         <motion.div
           key={item.href}
@@ -189,7 +160,7 @@ export default function Header() {
             damping: 20,
           }}
           className="fixed z-50"
-          style={{ top: "60px", right: "40px" }} // Ajusté pour le bouton plus grand
+          style={{ top: "60px", right: "40px" }}
         >
           <Link href={item.href} onClick={() => setIsExpanded(false)}>
             <motion.div
@@ -198,11 +169,11 @@ export default function Header() {
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              {/* Cercle de navigation avec gradient */}
-              <div className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer ${
+              {/* Cercle de navigation avec nouvelles couleurs */}
+              <div className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer font-roboto ${
                 pathname === item.href
-                  ? "bg-gradient-to-br from-[#050505] to-[#2a2a2a] text-[#fcfcfc] shadow-lg"
-                  : "bg-[#fcfcfc] text-[#050505] border border-[#050505]/20 hover:border-[#050505]/40"
+                  ? "bg-gradient-to-br from-[#e15e4c] to-[#e15e4c]/80 text-[#eae8da] shadow-lg"
+                  : "bg-[#eae8da] text-[#203270] border border-[#e15e4c]/20 hover:border-[#e15e4c]/40"
               }`}>
                 <span className="text-sm font-medium">{item.label}</span>
               </div>
@@ -214,7 +185,7 @@ export default function Header() {
                 whileHover={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="text-xs text-[#050505]/70 font-medium bg-[#fcfcfc] px-2 py-1 rounded-md shadow-sm whitespace-nowrap">
+                <span className="text-xs text-[#eae8da] font-medium bg-[#203270] px-2 py-1 rounded-md shadow-sm whitespace-nowrap font-roboto">
                   {item.title}
                 </span>
               </motion.div>
@@ -225,8 +196,8 @@ export default function Header() {
                   className="absolute inset-0 rounded-full pointer-events-none"
                   animate={{
                     boxShadow: [
-                      "0 0 0 0 rgba(5,5,5,0.2)",
-                      "0 0 0 10px rgba(5,5,5,0)",
+                      "0 0 0 0 rgba(225,94,76,0.4)",
+                      "0 0 0 10px rgba(225,94,76,0)",
                     ],
                   }}
                   transition={{
