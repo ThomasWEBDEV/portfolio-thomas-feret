@@ -66,10 +66,10 @@ export default function Home() {
     <div className="min-h-screen bg-[#203270] flex justify-center max-w-7xl mx-auto px-8">
 
       {/* COLONNE GAUCHE - FIXE */}
-      <div className="w-full lg:w-1/2 h-screen sticky top-0 flex flex-col justify-between pt-32 py-12 pr-12 relative overflow-hidden">
+      <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 flex flex-col justify-between pt-16 lg:pt-32 py-12 lg:pr-12 relative overflow-hidden px-4 lg:px-0">
 
         {/* Cube 3D en arrière-plan */}
-        <div className="absolute top-1/4 left-1/4 pointer-events-none opacity-30">
+        <div className="absolute top-1/4 left-1/4 pointer-events-none opacity-30 hidden lg:block">
           <motion.div
             animate={{
               rotateX: [0, 360],
@@ -195,7 +195,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="relative z-10 mt-8 w-full h-96"
+          className="relative z-10 mt-8 w-full h-64 lg:h-96"
         >
           <Image
             src="/images/logo1.jpg"
@@ -207,7 +207,7 @@ export default function Home() {
       </div>
 
       {/* COLONNE DROITE - SCROLLABLE */}
-      <div className="hidden lg:block w-1/2 ml-auto overflow-y-auto pl-12 pt-32 pb-16 relative">
+      <div className="w-full lg:w-1/2 lg:ml-auto overflow-y-auto px-4 lg:pl-12 pt-8 lg:pt-32 pb-16 relative">
 
         {/* Effet de lueur qui suit la souris - uniquement sur la partie droite */}
         <div
@@ -313,7 +313,7 @@ export default function Home() {
                   id: 1,
                   title: "GardenBnB",
                   description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
-                  image: "https://placehold.co/400x200/203270/eae8da?text=GardenBnB",
+                  image: "/images/logo2.jpg",
                   link: "https://gardenbnb-thomaswebdev-cb5b63913774.herokuapp.com/",
                   tags: ["Ruby on Rails", "PostgreSQL", "Mapbox", "Lead Dev"],
                   stars: "Projet collaboratif"
@@ -322,7 +322,7 @@ export default function Home() {
                   id: 2,
                   title: "Dream Journal & Analyzer",
                   description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
-                  image: "https://placehold.co/400x200/203270/eae8da?text=DreamLog",
+                  image: "/images/logo3.jpg",
                   link: "https://dreamlog-45cf91224f2e.herokuapp.com/",
                   tags: ["Ruby on Rails", "API", "IA", "Lead Dev"],
                   stars: "Projet de fin"
@@ -331,7 +331,7 @@ export default function Home() {
                   id: 3,
                   title: "Agrégateur d'Actualités IA",
                   description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
-                  image: "https://placehold.co/400x200/203270/eae8da?text=News+Aggregator",
+                  image: "/images/logo4.jpg",
                   link: "https://actu-ia-da62affe5174.herokuapp.com/",
                   tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
                   stars: "En développement"
@@ -340,7 +340,7 @@ export default function Home() {
                   id: 4,
                   title: "Recettes de Cuisine",
                   description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
-                  image: "https://placehold.co/400x200/203270/eae8da?text=Recettes",
+                  image: "/images/logo5.jpg",
                   link: "https://recettes-cuisine-thomas-714e2391e369.herokuapp.com/",
                   tags: ["Ruby on Rails", "Active Record", "CRUD"],
                   stars: "Application web"
@@ -349,7 +349,7 @@ export default function Home() {
                   id: 5,
                   title: "Manga Watchlist",
                   description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
-                  image: "https://placehold.co/400x200/203270/eae8da?text=Manga+Watchlist",
+                  image: "/images/logo6.jpg",
                   link: "https://manga-watch-list-103932ca0caf.herokuapp.com/",
                   tags: ["Ruby on Rails", "CRUD", "Exercice"],
                   stars: "Projet d'apprentissage"
@@ -358,7 +358,7 @@ export default function Home() {
                   id: 6,
                   title: "E-commerce avec Paiement Intégré",
                   description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
-                  image: "https://placehold.co/400x200/203270/eae8da?text=E-commerce",
+                  image: "/images/logo7.jpg",
                   link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
                   tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
                   stars: "Full-stack"
