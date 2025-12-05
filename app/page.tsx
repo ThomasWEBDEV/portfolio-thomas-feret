@@ -57,10 +57,10 @@ export default function Home() {
   ];
 
   const socialLinks = [
-    { href: "https://github.com", icon: "github", label: "GitHub" },
-    { href: "https://linkedin.com", icon: "linkedin", label: "LinkedIn" },
-    { href: "https://twitter.com", icon: "twitter", label: "Twitter" },
-  ];
+    { href: "https://github.com/ThomasWEBDEV", icon: "github", label: "GitHub" },
+    { href: "https://www.linkedin.com/in/thomas-feret-dev", icon: "linkedin", label: "LinkedIn" },
+    { href: "mailto:thomas.feret@hotmail.fr", icon: "mail", label: "Email" }, // C'est ici que l'icône mail est liée
+  ];
 
   return (
     <div className="min-h-screen bg-[#203270] flex justify-center max-w-7xl mx-auto px-8">
@@ -179,11 +179,12 @@ export default function Home() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 )}
-                {social.icon === "twitter" && (
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                  </svg>
-                )}
+                {social.icon === "mail" && (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                )}
               </motion.a>
             ))}
           </div>
@@ -304,127 +305,128 @@ export default function Home() {
         </section>
 
         {/* Section Projects */}
-        <section id="projects">
-          <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PROJECTS</h3>
-          <div className="space-y-12">
-            {[
-              {
-                id: 1,
-                title: "GardenBnB",
-                description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=GardenBnB",
-                link: "https://gardenbnb-thomaswebdev-cb5b63913774.herokuapp.com/",
-                tags: ["Ruby on Rails", "PostgreSQL", "Mapbox", "Lead Dev"],
-                stars: "Projet collaboratif"
-              },
-              {
-                id: 2,
-                title: "Dream Journal & Analyzer",
-                description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec fonctionnalités avancées.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=DreamLog",
-                link: "#",
-                tags: ["Ruby on Rails", "API", "Lead Dev"],
-                stars: "Projet de fin"
-              },
-              {
-                id: 3,
-                title: "Agrégateur d'Actualités IA",
-                description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=News+Aggregator",
-                link: "#",
-                tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
-                stars: "En développement"
-              },
-              {
-                id: 4,
-                title: "E-commerce avec Paiement Intégré",
-                description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=E-commerce",
-                link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
-                tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
-                stars: "Full-stack"
-              },
-              {
-                id: 5,
-                title: "Manga Watchlist",
-                description: "Plateforme de découverte et recommandation de mangas. Système de watchlist personnalisée avec conseils et suggestions basés sur les préférences utilisateur.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=Manga+Watchlist",
-                link: "#",
-                tags: ["Ruby on Rails", "API", "Recommandations"],
-                stars: "Application web"
-              },
-              {
-                id: 6,
-                title: "Recettes de Cuisine",
-                description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=Recettes",
-                link: "https://recettes-cuisine-thomas-714e2391e369.herokuapp.com/",
-                tags: ["Ruby on Rails", "Active Record", "CRUD"],
-                stars: "Application web"
-              },
+          <section id="projects">
+            <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PROJECTS</h3>
+            <div className="space-y-12">
+              {[
+                {
+                  id: 1,
+                  title: "GardenBnB",
+                  description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
+                  image: "https://placehold.co/400x200/203270/eae8da?text=GardenBnB",
+                  link: "https://gardenbnb-thomaswebdev-cb5b63913774.herokuapp.com/",
+                  tags: ["Ruby on Rails", "PostgreSQL", "Mapbox", "Lead Dev"],
+                  stars: "Projet collaboratif"
+                },
+                {
+                  id: 2,
+                  title: "Dream Journal & Analyzer",
+                  description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
+                  image: "https://placehold.co/400x200/203270/eae8da?text=DreamLog",
+                  link: "https://dreamlog-45cf91224f2e.herokuapp.com/",
+                  tags: ["Ruby on Rails", "API", "IA", "Lead Dev"],
+                  stars: "Projet de fin"
+                },
+                {
+                  id: 3,
+                  title: "Agrégateur d'Actualités IA",
+                  description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
+                  image: "https://placehold.co/400x200/203270/eae8da?text=News+Aggregator",
+                  link: "https://actu-ia-da62affe5174.herokuapp.com/",
+                  tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
+                  stars: "En développement"
+                },
+                {
+                  id: 4,
+                  title: "Recettes de Cuisine",
+                  description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
+                  image: "https://placehold.co/400x200/203270/eae8da?text=Recettes",
+                  link: "https://recettes-cuisine-thomas-714e2391e369.herokuapp.com/",
+                  tags: ["Ruby on Rails", "Active Record", "CRUD"],
+                  stars: "Application web"
+                },
+                {
+                  id: 5,
+                  title: "Manga Watchlist",
+                  description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
+                  image: "https://placehold.co/400x200/203270/eae8da?text=Manga+Watchlist",
+                  link: "https://manga-watch-list-103932ca0caf.herokuapp.com/",
+                  tags: ["Ruby on Rails", "CRUD", "Exercice"],
+                  stars: "Projet d'apprentissage"
+                },
+                {
+                  id: 6,
+                  title: "E-commerce avec Paiement Intégré",
+                  description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
+                  image: "https://placehold.co/400x200/203270/eae8da?text=E-commerce",
+                  link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
+                  tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
+                  stars: "Full-stack"
+                },
 
-            ].map((project, index) => (
-              <motion.a
-                key={project.id}
-                href={project.link}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group block"
-              >
-                <div className="grid grid-cols-4 gap-4">
-                  <div className="col-span-1">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="rounded border-2 border-[#eae8da]/10 group-hover:border-[#e15e4c]/30 transition-all duration-300"
-                    />
-                  </div>
-                  <div className="col-span-3">
-                    <h4 className="text-[#eae8da] font-medium mb-2 group-hover:text-[#e15e4c] transition-colors flex items-center gap-2 font-roboto">
-                      {project.title}
-                      <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </h4>
-                    <p className="text-[#eae8da]/60 text-sm mb-3 font-roboto leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {project.tags.map((tag, i) => (
-                        <span key={i} className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto">
-                          {tag}
-                        </span>
-                      ))}
+              ].map((project, index) => (
+                <motion.a
+                  key={project.id}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group block"
+                >
+                  <div className="grid grid-cols-4 gap-4">
+                    <div className="col-span-1">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="rounded border-2 border-[#eae8da]/10 group-hover:border-[#e15e4c]/30 transition-all duration-300"
+                      />
                     </div>
-                    <p className="text-[#eae8da]/40 text-xs font-roboto">{project.stars}</p>
+                    <div className="col-span-3">
+                      <h4 className="text-[#eae8da] font-medium mb-2 group-hover:text-[#e15e4c] transition-colors flex items-center gap-2 font-roboto">
+                        {project.title}
+                        <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </h4>
+                      <p className="text-[#eae8da]/60 text-sm mb-3 font-roboto leading-relaxed">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {project.tags.map((tag, i) => (
+                          <span key={i} className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-[#eae8da]/40 text-xs font-roboto">{project.stars}</p>
+                    </div>
                   </div>
-                </div>
-              </motion.a>
-            ))}
-          </div>
+                </motion.a>
+              ))}
+            </div>
 
-          {/* Lien vers archive complète */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mt-12"
-          >
-            <Link
-              href="/projets"
-              className="inline-flex items-center gap-2 text-[#eae8da] hover:text-[#e15e4c] transition-colors group font-roboto font-medium"
+            {/* Lien vers archive complète */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mt-12"
             >
-              Voir tous les projets
-              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </motion.div>
-        </section>
-
+              <Link
+                href="/projets"
+                className="inline-flex items-center gap-2 text-[#eae8da] hover:text-[#e15e4c] transition-colors group font-roboto font-medium"
+              >
+                Voir tous les projets
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </motion.div>
+          </section>
         {/* Footer */}
         <footer className="mt-32 pb-16">
           <p className="text-[#eae8da]/40 text-xs font-roboto">
