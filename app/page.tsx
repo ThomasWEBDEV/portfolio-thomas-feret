@@ -346,24 +346,6 @@ export default function Home() {
               },
               {
                 id: 5,
-                title: "Task Manager MVC",
-                description: "Application de gestion de tâches simple et efficace construite avec Ruby on Rails. Architecture MVC claire et fonctionnalités CRUD complètes.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=Task+Manager",
-                link: "https://taskmanagermvc-20b7e0f083e5.herokuapp.com/",
-                tags: ["Ruby on Rails", "MVC", "SQLite"],
-                stars: "Architecture MVC"
-              },
-              {
-                id: 6,
-                title: "EventHub MVP",
-                description: "Plateforme collaborative d'événements permettant la création, gestion et découverte d'événements. Interface intuitive avec système d'inscription.",
-                image: "https://placehold.co/400x200/203270/eae8da?text=EventHub",
-                link: "https://eventhubmvp-59d0ddba5de9.herokuapp.com/",
-                tags: ["Ruby on Rails", "JavaScript", "Bootstrap"],
-                stars: "Plateforme MVP"
-              },
-              {
-                id: 7,
                 title: "Manga Watchlist",
                 description: "Plateforme de découverte et recommandation de mangas. Système de watchlist personnalisée avec conseils et suggestions basés sur les préférences utilisateur.",
                 image: "https://placehold.co/400x200/203270/eae8da?text=Manga+Watchlist",
@@ -372,7 +354,7 @@ export default function Home() {
                 stars: "Application web"
               },
               {
-                id: 8,
+                id: 6,
                 title: "Recettes de Cuisine",
                 description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
                 image: "https://placehold.co/400x200/203270/eae8da?text=Recettes",
@@ -380,6 +362,7 @@ export default function Home() {
                 tags: ["Ruby on Rails", "Active Record", "CRUD"],
                 stars: "Application web"
               },
+
             ].map((project, index) => (
               <motion.a
                 key={project.id}
