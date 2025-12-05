@@ -219,7 +219,7 @@ export default function Home() {
         />
 
         {/* Section About */}
-        <section id="about" className="mb-32">
+        <section id="about" className="mb-32 scroll-mt-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -243,7 +243,7 @@ export default function Home() {
 
 
         {/* Section Experience */}
-        <section id="experience" className="mb-32">
+        <section id="experience" className="mb-32 scroll-mt-32">
           <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PARCOURS</h3>
           <div className="space-y-12">
             {[
@@ -305,7 +305,7 @@ export default function Home() {
         </section>
 
         {/* Section Projects */}
-          <section id="projects">
+          <section id="projects" className="scroll-mt-32">
             <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PROJECTS</h3>
             <div className="space-y-12">
               {[
@@ -430,7 +430,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-32 pb-16">
           <p className="text-[#eae8da]/40 text-xs font-roboto">
-            Codé avec soin par Thomas Feret. Construit avec Next.js et Tailwind CSS.
+            Pensé et développé dans Visual Studio Code. Construit avec Next.js et Tailwind CSS.
           </p>
         </footer>
       </div>
