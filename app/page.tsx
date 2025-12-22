@@ -311,6 +311,15 @@ export default function Home() {
               {[
                 {
                   id: 1,
+                  title: "E-commerce avec Paiement Intégré",
+                  description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
+                  image: "/images/logo7.jpg",
+                  link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
+                  tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
+                  stars: "Full-stack"
+                },
+                {
+                  id: 2,
                   title: "GardenBnB",
                   description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
                   image: "/images/logo2.jpg",
@@ -319,7 +328,7 @@ export default function Home() {
                   stars: "Projet collaboratif"
                 },
                 {
-                  id: 2,
+                  id: 3,
                   title: "Dream Journal & Analyzer",
                   description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
                   image: "/images/logo3.jpg",
@@ -328,7 +337,7 @@ export default function Home() {
                   stars: "Projet de fin"
                 },
                 {
-                  id: 3,
+                  id: 4,
                   title: "Agrégateur d'Actualités IA",
                   description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
                   image: "/images/logo4.jpg",
@@ -337,7 +346,7 @@ export default function Home() {
                   stars: "En développement"
                 },
                 {
-                  id: 4,
+                  id: 5,
                   title: "Recettes de Cuisine",
                   description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
                   image: "/images/logo5.jpg",
@@ -346,7 +355,7 @@ export default function Home() {
                   stars: "Application web"
                 },
                 {
-                  id: 5,
+                  id: 6,
                   title: "Manga Watchlist",
                   description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
                   image: "/images/logo6.jpg",
@@ -354,15 +363,7 @@ export default function Home() {
                   tags: ["Ruby on Rails", "CRUD", "Exercice"],
                   stars: "Projet d'apprentissage"
                 },
-                {
-                  id: 6,
-                  title: "E-commerce avec Paiement Intégré",
-                  description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
-                  image: "/images/logo7.jpg",
-                  link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
-                  tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
-                  stars: "Full-stack"
-                },
+
 
               ].map((project, index) => (
                 <motion.a
