@@ -227,16 +227,19 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Développeur web passionné, je me consacre chaque jour à la création d’applications performantes et intuitives. Mon aventure a commencé avec une formation intensive au Wagon (RNCP niveau 6), un bootcamp de 6 mois que j’ai suivi à temps plein, bien au-delà des attentes, pour maîtriser les fondamentaux et me perfectionner.
+              Développeur web passionné, je consacre mon temps à apprendre, pratiquer et progresser dans cet univers. Ayant suivi une formation intensive au Wagon (RNCP niveau 6), un bootcamp de 6 mois normalement à temps partiel que j'ai choisi de suivre à temps plein, poussant ainsi mon apprentissage bien au-delà des attentes pour maîtriser les fondamentaux et me perfectionner.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Depuis près d’un an, j’approfondis mes compétences sur l’ensemble de la stack moderne : React, Next.js, TypeScript, Ruby on Rails et Node.js. Toujours en quête d’apprentissage, j’explore sans cesse de nouveaux frameworks et outils, poussé par une curiosité insatiable pour chaque facette du monde numérique.
+              Depuis la fin de ma formation, j'approfondis mes compétences sur l'ensemble de la stack moderne : React, Next.js, TypeScript, Ruby on Rails et Node.js et +. Toujours en quête d'apprentissage, j'explore de nouveaux frameworks et outils, poussé par une curiosité insatiable pour chaque facette du numérique.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Mon engagement et ma rigueur me permettent de livrer des interfaces élégantes, accessibles et optimisées. Basé en Bretagne et mobile sur Rennes et sa périphérie, je suis disponible pour des projets ambitieux en freelance ou en CDI, au service d’équipes dynamiques et motivées.
+              Mon engagement et ma rigueur me permettent de livrer des interfaces accessibles et optimisées. Bien qu'augmenté par l'intelligence artificielle, je prends le soin de comprendre et de maîtriser chaque ligne de code générée comme un chef d'orchestre le ferait. Je suis impatient de rejoindre une équipe professionnelle pour monter en compétences. Basé en Bretagne et mobile sur Rennes et sa périphérie, je suis disponible pour des projets ambitieux en freelance ou en CDI.
+            </p>
+            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
+              L'équipe qui me fera confiance pourra compter sur un investissement total de ma part. Conscient de mon fort potentiel d'évolution, je m'engage à continuer de me former en parallèle pour apporter toujours plus de valeur aux projets qui me seront confiés.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
-              En dehors des écrans, je cultive mon équilibre en pratiquant divers sports, en profitant de moments complices avec ma conjointe et en emmenant souvent mon chien découvrir les plages bretonnes.
+              En dehors des écrans, je cultive mon équilibre en pratiquant divers sports et en profitant des paysages bretons.
             </p>
           </motion.div>
         </section>
