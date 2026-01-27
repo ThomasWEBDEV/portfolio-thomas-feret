@@ -227,19 +227,19 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Développeur passionné par la sécurité applicative, je consacre mon temps à apprendre, pratiquer et progresser dans l'univers de la cybersécurité. Ayant suivi une formation intensive au Wagon (RNCP niveau 6), un bootcamp de 6 mois normalement à temps partiel que j'ai choisi de suivre à temps plein, j'ai rapidement orienté mes compétences vers la sécurité des applications et architectures web.
+              Développeur passionné par la sécurité applicative, je consacre mon temps à apprendre et progresser dans l'univers de la cybersécurité. Ayant suivi une formation intensive au Wagon (RNCP niveau 6), j'ai rapidement orienté mes compétences vers la sécurité des applications et architectures web.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Depuis la fin de ma formation, j'approfondis mes compétences en sécurité sur l'ensemble de la stack moderne : React, Next.js, TypeScript, Ruby on Rails et Node.js, avec un focus particulier sur les vulnérabilités OWASP, l'analyse de code sécurisé et la détection de failles. Toujours en quête d'apprentissage, j'explore la cryptographie, les CTF et les outils DevSecOps, poussé par une curiosité insatiable pour chaque facette de la sécurité numérique.
+              Depuis la fin de ma formation, j'approfondis mes compétences en sécurité sur la stack moderne : React, Next.js, TypeScript, Ruby on Rails et Node.js, avec un focus sur les vulnérabilités OWASP, l'analyse de code sécurisé et les outils DevSecOps.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Mon engagement et ma rigueur me permettent de livrer des architectures sécurisées et optimisées. Bien qu'augmenté par l'intelligence artificielle, je prends le soin d'auditer et de comprendre chaque ligne de code comme un expert en sécurité le ferait. Je suis impatient de rejoindre une équipe professionnelle pour monter en compétences en cybersécurité et DevSecOps. Basé en Bretagne et mobile sur Rennes et sa périphérie, je recherche une alternance pour concrétiser mon Mastère en Cybersécurité.
+              Mon engagement et ma rigueur me permettent de livrer des architectures sécurisées et optimisées. Basé en Bretagne et mobile sur Rennes et sa périphérie, je recherche une alternance pour concrétiser mon Mastère en Cybersécurité.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              L'équipe qui me fera confiance pourra compter sur un investissement total de ma part. Conscient de mon fort potentiel d'évolution en sécurité applicative, je m'engage à continuer de me former en parallèle (certifications, veille technologique) pour apporter toujours plus de valeur aux projets qui me seront confiés.
+              L'équipe qui me fera confiance pourra compter sur un investissement total de ma part. Conscient de mon fort potentiel d'évolution, je m'engage à continuer de me former en parallèle pour apporter toujours plus de valeur aux projets.
             </p>
             <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
-              En dehors des écrans, je cultive mon équilibre en pratiquant la guitare depuis 16 ans, en explorant la cryptographie par passion, et en profitant des paysages bretons.
+              En dehors des écrans, je cultive mon équilibre en pratiquant la guitare depuis 16 ans et en profitant des paysages bretons.
             </p>
           </motion.div>
         </section>
