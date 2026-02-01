@@ -22,15 +22,15 @@ export default function Home() {
 
   const navLinks = [
     { href: "#about", label: "ABOUT", description: "En savoir plus sur moi" },
-    { href: "#experience", label: "EXPERIENCE", description: "Mon parcours professionnel" },
     { href: "#projects", label: "PROJECTS", description: "Mes réalisations" },
+    { href: "#experience", label: "EXPERIENCE", description: "Mon parcours professionnel" },
   ];
 
   const socialLinks = [
-    { href: "https://github.com/ThomasWEBDEV", icon: "github", label: "GitHub" },
-    { href: "https://www.linkedin.com/in/thomas-feret-dev", icon: "linkedin", label: "LinkedIn" },
-    { href: "mailto:thomas.feret@hotmail.fr", icon: "mail", label: "Email" }, // C'est ici que l'icône mail est liée
-  ];
+    { href: "https://github.com/ThomasWEBDEV", icon: "github", label: "GitHub" },
+    { href: "https://www.linkedin.com/in/thomas-feret-dev", icon: "linkedin", label: "LinkedIn" },
+    { href: "mailto:thomas.feret@hotmail.fr", icon: "mail", label: "Email" },
+  ];
 
   return (
     <div className="min-h-screen bg-[#203270] flex justify-center max-w-7xl mx-auto px-8">
@@ -150,11 +150,11 @@ export default function Home() {
                   </svg>
                 )}
                 {social.icon === "mail" && (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <rect width="20" height="16" x="2" y="4" rx="2"/>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                  </svg>
-                )}
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                )}
               </motion.a>
             ))}
           </div>
@@ -214,9 +214,140 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* Section Projects — déplacée avant Experience */}
+        <section id="projects" className="mb-32 scroll-mt-32">
+          <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PROJECTS</h3>
+          <div className="space-y-12">
+            {[
+              {
+                id: 0,
+                title: "ThreatHunter Lab",
+                description: "Honeypot SSH Cowrie déployé sur AWS EC2 pour capturer des attaques réelles en provenance d'Internet. Analyse automatisée des logs en Python : détection de sessions, extraction des tentatives de login et des commandes exécutées par les attaquants.",
+                image: "/images/threathunter.jpg",
+                link: "https://github.com/ThomasWEBDEV/threathunter-lab",
+                tags: ["Python", "AWS EC2", "Cowrie", "Cybersécurité", "Linux"],
+                stars: "Projet personnel"
+              },
+              {
+                id: 1,
+                title: "E-commerce avec Paiement Intégré",
+                description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
+                image: "/images/logo7.jpg",
+                link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
+                tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
+                stars: "Full-stack"
+              },
+              {
+                id: 2,
+                title: "GardenBnB",
+                description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
+                image: "/images/logo2.jpg",
+                link: "https://gardenbnb-thomaswebdev-cb5b63913774.herokuapp.com/",
+                tags: ["Ruby on Rails", "PostgreSQL", "Mapbox", "Lead Dev"],
+                stars: "Projet collaboratif"
+              },
+              {
+                id: 3,
+                title: "Dream Journal & Analyzer",
+                description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
+                image: "/images/logo3.jpg",
+                link: "https://dreamlog-45cf91224f2e.herokuapp.com/",
+                tags: ["Ruby on Rails", "API", "IA", "Lead Dev"],
+                stars: "Projet de fin"
+              },
+              {
+                id: 4,
+                title: "Agrégateur d'Actualités IA",
+                description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
+                image: "/images/logo4.jpg",
+                link: "https://actu-ia-da62affe5174.herokuapp.com/",
+                tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
+                stars: "En développement"
+              },
+              {
+                id: 5,
+                title: "Recettes de Cuisine",
+                description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
+                image: "/images/logo5.jpg",
+                link: "https://recettes-cuisine-thomas-714e2391e369.herokuapp.com/",
+                tags: ["Ruby on Rails", "Active Record", "CRUD"],
+                stars: "Application web"
+              },
+              {
+                id: 6,
+                title: "Manga Watchlist",
+                description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
+                image: "/images/logo6.jpg",
+                link: "https://manga-watch-list-103932ca0caf.herokuapp.com/",
+                tags: ["Ruby on Rails", "CRUD", "Exercice"],
+                stars: "Projet d'apprentissage"
+              },
+            ].map((project, index) => (
+              <motion.a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group block"
+              >
+                <div className="grid grid-cols-4 gap-4">
+                  <div className="col-span-1">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="rounded border-2 border-[#eae8da]/10 group-hover:border-[#e15e4c]/30 transition-all duration-300"
+                    />
+                  </div>
+                  <div className="col-span-3">
+                    <h4 className="text-[#eae8da] font-medium mb-2 group-hover:text-[#e15e4c] transition-colors flex items-center gap-2 font-roboto">
+                      {project.title}
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </h4>
+                    <p className="text-[#eae8da]/60 text-sm mb-3 font-roboto leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {project.tags.map((tag, i) => (
+                        <span key={i} className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-[#eae8da]/40 text-xs font-roboto">{project.stars}</p>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
 
-        {/* Section Experience */}
-        <section id="experience" className="mb-32 scroll-mt-32">
+          {/* Lien vers archive complète */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <Link
+              href="/projets"
+              className="inline-flex items-center gap-2 text-[#eae8da] hover:text-[#e15e4c] transition-colors group font-roboto font-medium"
+            >
+              Voir tous les projets
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </motion.div>
+        </section>
+
+        {/* Section Experience — déplacée après Projects */}
+        <section id="experience" className="scroll-mt-32">
           <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PARCOURS</h3>
           <div className="space-y-12">
             {[
@@ -277,139 +408,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section Projects */}
-          <section id="projects" className="scroll-mt-32">
-            <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PROJECTS</h3>
-            <div className="space-y-12">
-              {[
-                {
-                  id: 0,
-                  title: "ThreatHunter Lab",
-                  description: "Honeypot SSH Cowrie déployé sur AWS EC2 pour capturer des attaques réelles en provenance d'Internet. Analyse automatisée des logs en Python : détection de sessions, extraction des tentatives de login et des commandes exécutées par les attaquants.",
-                  image: "/images/threathunter.jpg",
-                  link: "https://github.com/ThomasWEBDEV/threathunter-lab",
-                  tags: ["Python", "AWS EC2", "Cowrie", "Cybersécurité", "Linux"],
-                  stars: "Projet personnel"
-                },
-                {
-                  id: 1,
-                  title: "E-commerce avec Paiement Intégré",
-                  description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
-                  image: "/images/logo7.jpg",
-                  link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
-                  tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
-                  stars: "Full-stack"
-                },
-                {
-                  id: 2,
-                  title: "GardenBnB",
-                  description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
-                  image: "/images/logo2.jpg",
-                  link: "https://gardenbnb-thomaswebdev-cb5b63913774.herokuapp.com/",
-                  tags: ["Ruby on Rails", "PostgreSQL", "Mapbox", "Lead Dev"],
-                  stars: "Projet collaboratif"
-                },
-                {
-                  id: 3,
-                  title: "Dream Journal & Analyzer",
-                  description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
-                  image: "/images/logo3.jpg",
-                  link: "https://dreamlog-45cf91224f2e.herokuapp.com/",
-                  tags: ["Ruby on Rails", "API", "IA", "Lead Dev"],
-                  stars: "Projet de fin"
-                },
-                {
-                  id: 4,
-                  title: "Agrégateur d'Actualités IA",
-                  description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
-                  image: "/images/logo4.jpg",
-                  link: "https://actu-ia-da62affe5174.herokuapp.com/",
-                  tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
-                  stars: "En développement"
-                },
-                {
-                  id: 5,
-                  title: "Recettes de Cuisine",
-                  description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
-                  image: "/images/logo5.jpg",
-                  link: "https://recettes-cuisine-thomas-714e2391e369.herokuapp.com/",
-                  tags: ["Ruby on Rails", "Active Record", "CRUD"],
-                  stars: "Application web"
-                },
-                {
-                  id: 6,
-                  title: "Manga Watchlist",
-                  description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
-                  image: "/images/logo6.jpg",
-                  link: "https://manga-watch-list-103932ca0caf.herokuapp.com/",
-                  tags: ["Ruby on Rails", "CRUD", "Exercice"],
-                  stars: "Projet d'apprentissage"
-                },
-
-
-              ].map((project, index) => (
-                <motion.a
-                  key={project.id}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group block"
-                >
-                  <div className="grid grid-cols-4 gap-4">
-                    <div className="col-span-1">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="rounded border-2 border-[#eae8da]/10 group-hover:border-[#e15e4c]/30 transition-all duration-300"
-                      />
-                    </div>
-                    <div className="col-span-3">
-                      <h4 className="text-[#eae8da] font-medium mb-2 group-hover:text-[#e15e4c] transition-colors flex items-center gap-2 font-roboto">
-                        {project.title}
-                        <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </h4>
-                      <p className="text-[#eae8da]/60 text-sm mb-3 font-roboto leading-relaxed">
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-2">
-                        {project.tags.map((tag, i) => (
-                          <span key={i} className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <p className="text-[#eae8da]/40 text-xs font-roboto">{project.stars}</p>
-                    </div>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-
-            {/* Lien vers archive complète */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mt-12"
-            >
-              <Link
-                href="/projets"
-                className="inline-flex items-center gap-2 text-[#eae8da] hover:text-[#e15e4c] transition-colors group font-roboto font-medium"
-              >
-                Voir tous les projets
-                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
-          </section>
         {/* Footer */}
         <footer className="mt-32 pb-16">
           <p className="text-[#eae8da]/40 text-xs font-roboto">
