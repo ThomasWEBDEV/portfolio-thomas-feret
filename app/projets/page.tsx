@@ -8,6 +8,15 @@ export default function ProjectsPage() {
 
   const projects = [
     {
+      id: 0,
+      title: "ThreatHunter Lab",
+      description: "Honeypot SSH Cowrie déployé sur une instance AWS EC2 (Ubuntu, Stockholm) pour capturer des attaques réelles. Infrastructure sécurisée avec accès admin sur port 2222 (clé SSH uniquement) et Fail2ban. Script Python parser.py pour l'analyse automatisée des logs JSON : détection de sessions externes, extraction des tentatives de login et des commandes exécutées.",
+      image: "/images/threathunter.jpg",
+      link: "https://github.com/ThomasWEBDEV/threathunter-lab",
+      tags: ["Python", "AWS EC2", "Cowrie Honeypot", "Fail2ban", "Cybersécurité", "Linux", "JSON"],
+      year: "2025"
+    },
+    {
       id: 1,
       title: "GardenBnB",
       description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
@@ -95,7 +104,6 @@ export default function ProjectsPage() {
             Du développement web full-stack aux intégrations d'intelligence artificielle.
           </p>
 
-          {/* AJOUTE CE BLOC ICI */}
           <div className="bg-white/50 border-l-4 border-[#e15e4c] p-6 max-w-3xl rounded-r-lg">
             <p className="text-[#203270]/80 text-base font-roboto leading-relaxed mb-4">
               <span className="font-semibold text-[#203270]">À propos de ces projets :</span> Cette sélection regroupe des réalisations issues de ma formation au Wagon
@@ -187,6 +195,13 @@ export default function ProjectsPage() {
                 {[1, 2, 5].includes(project.id) && (
                   <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
                     ✦ Projet Le Wagon
+                  </p>
+                )}
+
+                {/* CONDITION — ThreatHunter Lab */}
+                {project.id === 0 && (
+                  <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                    ✦ Projet de démonstration — Candidature Mastère Cybersécurité
                   </p>
                 )}
 
