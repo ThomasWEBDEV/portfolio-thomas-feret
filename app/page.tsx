@@ -26,36 +26,6 @@ export default function Home() {
     { href: "#projects", label: "PROJECTS", description: "Mes réalisations" },
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: "Plateforme SaaS Éducative",
-      description: "Développement full-stack d'une application d'apprentissage avec gestion des utilisateurs et API RESTful. Interface moderne avec Next.js et TypeScript.",
-      image: "https://placehold.co/400x200/203270/eae8da?text=SaaS+Platform",
-      link: "#",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-      stars: "1.2k"
-    },
-    {
-      id: 2,
-      title: "Application E-commerce",
-      description: "Site e-commerce complet avec panier, paiement Stripe, et gestion des commandes. Design responsive et optimisé pour les mobiles.",
-      image: "https://placehold.co/400x200/203270/eae8da?text=E-commerce",
-      link: "#",
-      tags: ["React", "Node.js", "Stripe"],
-      stars: "856"
-    },
-    {
-      id: 3,
-      title: "Dashboard Analytics",
-      description: "Dashboard de visualisation de données en temps réel avec graphiques interactifs et filtres avancés.",
-      image: "https://placehold.co/400x200/203270/eae8da?text=Dashboard",
-      link: "#",
-      tags: ["Vue.js", "D3.js", "Firebase"],
-      stars: "634"
-    },
-  ];
-
   const socialLinks = [
     { href: "https://github.com/ThomasWEBDEV", icon: "github", label: "GitHub" },
     { href: "https://www.linkedin.com/in/thomas-feret-dev", icon: "linkedin", label: "LinkedIn" },
@@ -312,6 +282,15 @@ export default function Home() {
             <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PROJECTS</h3>
             <div className="space-y-12">
               {[
+                {
+                  id: 0,
+                  title: "ThreatHunter Lab",
+                  description: "Honeypot SSH Cowrie déployé sur AWS EC2 pour capturer des attaques réelles en provenance d'Internet. Analyse automatisée des logs en Python : détection de sessions, extraction des tentatives de login et des commandes exécutées par les attaquants.",
+                  image: "/images/threathunter.jpg",
+                  link: "https://github.com/ThomasWEBDEV/threathunter-lab",
+                  tags: ["Python", "AWS EC2", "Cowrie", "Cybersécurité", "Linux"],
+                  stars: "Projet personnel"
+                },
                 {
                   id: 1,
                   title: "E-commerce avec Paiement Intégré",
