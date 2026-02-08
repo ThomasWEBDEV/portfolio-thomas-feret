@@ -8,7 +8,16 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      id: 0,
+      id: 1,
+      title: "IDS Detection Lab",
+      description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Infrastructure hybride cloud/on-premise optimisée (0€). Déploiement Suricata 8.0.3 (48,199 règles ET), Stack ELK 8.19 complète. Résultats : 20,343 événements en 22h, 266 alertes, 20+ IPs malveillantes (6 pays), scans SSH, IPs blacklistées.",
+      image: "/images/ids-lab.jpg",
+      link: "https://github.com/ThomasWEBDEV/ids-detection-lab",
+      tags: ["AWS EC2", "Suricata 8.0.3", "Elasticsearch", "Logstash", "Kibana", "Python", "Fail2ban", "SOC"],
+      year: "2025"
+    },
+    {
+      id: 1,
       title: "ThreatHunter Lab",
       description: "Honeypot SSH Cowrie déployé sur une instance AWS EC2 (Ubuntu, Stockholm) pour capturer des attaques réelles. Infrastructure sécurisée avec accès admin sur port 2222 (clé SSH uniquement) et Fail2ban. Script Python parser.py pour l'analyse automatisée des logs JSON : détection de sessions externes, extraction des tentatives de login et des commandes exécutées.",
       image: "/images/threathunter.jpg",
@@ -17,7 +26,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 1,
+      id: 2,
       title: "GardenBnB",
       description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
       image: "/images/logo2.jpg",
@@ -26,7 +35,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "Dream Journal & Analyzer",
       description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
       image: "/images/logo3.jpg",
@@ -35,7 +44,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "Agrégateur d'Actualités IA",
       description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
       image: "/images/logo4.jpg",
@@ -44,7 +53,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 4,
+      id: 5,
       title: "Recettes de Cuisine",
       description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
       image: "/images/logo5.jpg",
@@ -53,7 +62,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 5,
+      id: 6,
       title: "Manga Watchlist",
       description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
       image: "/images/logo6.jpg",
@@ -62,7 +71,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 6,
+      id: 7,
       title: "E-commerce avec Paiement Intégré",
       description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
       image: "/images/logo7.jpg",
@@ -215,6 +224,13 @@ export default function ProjectsPage() {
                       {tag}
                     </span>
                   ))}
+
+                  {/* CONDITION — IDS Detection Lab */}
+                {project.id === 1 && (
+                  <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                    ✦ Projet SOC/Blue Team — Recherche alternance cybersécurité
+                  </p>
+                )}
                 </div>
               </div>
             </motion.a>
