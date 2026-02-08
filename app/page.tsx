@@ -221,6 +221,15 @@ export default function Home() {
             {[
               {
                 id: 0,
+                title: "IDS Detection Lab",
+                description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Architecture hybride AWS/Local avec Suricata, ELK Stack. 20,343 événements capturés, 266 alertes détectées, 20+ IPs malveillantes identifiées.",
+                image: "/images/ids-lab.jpg",
+                link: "https://github.com/ThomasWEBDEV/ids-detection-lab",
+                tags: ["AWS EC2", "Suricata 8.0.3", "ELK Stack", "Python", "SOC/Blue Team"],
+                stars: "Projet Cybersécurité Professionnel"
+              },
+              {
+                id: 1,
                 title: "ThreatHunter Lab",
                 description: "Honeypot SSH Cowrie déployé sur AWS EC2 pour capturer des attaques réelles en provenance d'Internet. Analyse automatisée des logs en Python : détection de sessions, extraction des tentatives de login et des commandes exécutées par les attaquants.",
                 image: "/images/threathunter.jpg",
@@ -229,7 +238,7 @@ export default function Home() {
                 stars: "Projet personnel"
               },
               {
-                id: 1,
+                id: 2,
                 title: "E-commerce avec Paiement Intégré",
                 description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
                 image: "/images/logo7.jpg",
@@ -238,7 +247,7 @@ export default function Home() {
                 stars: "Full-stack"
               },
               {
-                id: 2,
+                id: 3,
                 title: "GardenBnB",
                 description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
                 image: "/images/logo2.jpg",
@@ -247,7 +256,7 @@ export default function Home() {
                 stars: "Projet collaboratif"
               },
               {
-                id: 3,
+                id: 4,
                 title: "Dream Journal & Analyzer",
                 description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
                 image: "/images/logo3.jpg",
@@ -256,7 +265,7 @@ export default function Home() {
                 stars: "Projet de fin"
               },
               {
-                id: 4,
+                id: 5,
                 title: "Agrégateur d'Actualités IA",
                 description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
                 image: "/images/logo4.jpg",
@@ -265,7 +274,7 @@ export default function Home() {
                 stars: "En développement"
               },
               {
-                id: 5,
+                id: 6,
                 title: "Recettes de Cuisine",
                 description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
                 image: "/images/logo5.jpg",
@@ -274,7 +283,7 @@ export default function Home() {
                 stars: "Application web"
               },
               {
-                id: 6,
+                id: 7,
                 title: "Manga Watchlist",
                 description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
                 image: "/images/logo6.jpg",
