@@ -239,6 +239,15 @@ export default function Home() {
               },
               {
                 id: 2,
+                title: "Digital Forensics Lab",
+                description: "Investigation forensics complète d'une compromission par BlackEnergy v2. Analyse d'un dump mémoire Windows XP (2.1 Go) via Volatility 3. Injection dans svchost.exe, extraction du driver rootkit str.sys. Challenge CyberDefenders : 8/8.",
+                image: "/images/forensics-lab.jpg",
+                link: "https://github.com/ThomasWEBDEV/digital-forensics-lab",
+                tags: ["Volatility 3", "Python 3", "MITRE ATT&CK", "SANS PICERL", "Forensics"],
+                stars: "Challenge CyberDefenders 8/8 (100%)"
+              },
+              {
+                id: 3,
                 title: "E-commerce avec Paiement Intégré",
                 description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
                 image: "/images/logo7.jpg",
@@ -247,7 +256,7 @@ export default function Home() {
                 stars: "Full-stack"
               },
               {
-                id: 3,
+                id: 4,
                 title: "GardenBnB",
                 description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
                 image: "/images/logo2.jpg",
@@ -256,7 +265,7 @@ export default function Home() {
                 stars: "Projet collaboratif"
               },
               {
-                id: 4,
+                id: 5,
                 title: "Dream Journal & Analyzer",
                 description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
                 image: "/images/logo3.jpg",
@@ -265,7 +274,7 @@ export default function Home() {
                 stars: "Projet de fin"
               },
               {
-                id: 5,
+                id: 6,
                 title: "Agrégateur d'Actualités IA",
                 description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
                 image: "/images/logo4.jpg",
@@ -274,7 +283,7 @@ export default function Home() {
                 stars: "En développement"
               },
               {
-                id: 6,
+                id: 7,
                 title: "Recettes de Cuisine",
                 description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
                 image: "/images/logo5.jpg",
@@ -283,7 +292,7 @@ export default function Home() {
                 stars: "Application web"
               },
               {
-                id: 7,
+                id: 8,
                 title: "Manga Watchlist",
                 description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
                 image: "/images/logo6.jpg",
