@@ -8,7 +8,7 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      id: 1,
+      id: 0,
       title: "IDS Detection Lab",
       description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Infrastructure hybride cloud/on-premise optimisée (0€). Déploiement Suricata 8.0.3 (48,199 règles ET), Stack ELK 8.19 complète. Résultats : 20,343 événements en 22h, 266 alertes, 20+ IPs malveillantes (6 pays), scans SSH, IPs blacklistées.",
       image: "/images/ids-lab.jpg",
@@ -27,6 +27,15 @@ export default function ProjectsPage() {
     },
     {
       id: 2,
+      title: "Digital Forensics Lab",
+      description: "Investigation forensics complète d'une compromission par BlackEnergy v2, malware utilisé dans des attaques contre des infrastructures critiques (Ukraine 2015). Analyse d'un dump mémoire Windows XP (2.1 Go) via Volatility 3, méthodologie SANS PICERL. 10 plugins exécutés, 6 IOCs extraits, 6 techniques MITRE ATT&CK mappées, persistence kernel identifiée.",
+      image: "/images/forensics-lab.jpg",
+      link: "https://github.com/ThomasWEBDEV/digital-forensics-lab",
+      tags: ["Volatility 3", "Python 3", "MITRE ATT&CK", "SANS PICERL", "Forensics", "Malware Analysis"],
+      year: "2025"
+    },
+    {
+      id: 3,
       title: "GardenBnB",
       description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
       image: "/images/logo2.jpg",
@@ -35,7 +44,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "Dream Journal & Analyzer",
       description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
       image: "/images/logo3.jpg",
@@ -44,7 +53,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 4,
+      id: 5,
       title: "Agrégateur d'Actualités IA",
       description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
       image: "/images/logo4.jpg",
@@ -53,7 +62,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 5,
+      id: 6,
       title: "Recettes de Cuisine",
       description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
       image: "/images/logo5.jpg",
@@ -62,7 +71,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 6,
+      id: 7,
       title: "Manga Watchlist",
       description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
       image: "/images/logo6.jpg",
@@ -71,7 +80,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 7,
+      id: 8,
       title: "E-commerce avec Paiement Intégré",
       description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
       image: "/images/logo7.jpg",
@@ -180,59 +189,66 @@ export default function ProjectsPage() {
 
               {/* Content */}
               <div className="p-6">
-                {/* Header */}
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold text-[#203270] group-hover:text-[#e15e4c] transition-colors font-roboto">
-                    {project.title}
-                  </h3>
-                  <span className="text-xs text-[#203270]/40 font-roboto">{project.year}</span>
-                </div>
-
-                {/* Description */}
-                <p className="text-[#203270]/70 text-sm mb-4 font-roboto leading-relaxed line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* AJOUTE CETTE CONDITION ICI - pour Dream Journal uniquement */}
-                {project.id === 2 && (
-                  <p className="text-xs text-[#203270]/60 mb-3 font-roboto bg-[#203270]/5 p-2 rounded">
-                    💡 Créez un compte pour tester l'analyse de rêves par IA
-                  </p>
-                )}
-
-                {/* CONDITION */}
-                {[1, 2, 5].includes(project.id) && (
-                  <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                    ✦ Projet Le Wagon
-                  </p>
-                )}
-
-                {/* CONDITION — ThreatHunter Lab */}
-                {project.id === 0 && (
-                  <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                    ✦ Projet de démonstration — Candidature Mastère Cybersécurité
-                  </p>
-                )}
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-
-                  {/* CONDITION — IDS Detection Lab */}
-                {project.id === 1 && (
-                  <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                    ✦ Projet SOC/Blue Team — Recherche alternance cybersécurité
-                  </p>
-                )}
-                </div>
+              {/* Header */}
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-xl font-bold text-[#203270] group-hover:text-[#e15e4c] transition-colors font-roboto">
+                  {project.title}
+                </h3>
+                <span className="text-xs text-[#203270]/40 font-roboto">{project.year}</span>
               </div>
+
+              {/* Description */}
+              <p className="text-[#203270]/70 text-sm mb-4 font-roboto leading-relaxed line-clamp-3">
+                {project.description}
+              </p>
+
+              {/* CONDITION — IDS Detection Lab */}
+              {project.id === 0 && (
+                <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                  ✦ Projet SOC/Blue Team — Recherche alternance cybersécurité
+                </p>
+              )}
+
+              {/* CONDITION — ThreatHunter Lab */}
+              {project.id === 1 && (
+                <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                  ✦ Projet de démonstration — Candidature Mastère Cybersécurité
+                </p>
+              )}
+
+              {/* CONDITION — Digital Forensics Lab */}
+              {project.id === 2 && (
+                <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                  ✦ Challenge CyberDefenders BlackEnergy — Score 8/8 (100%)
+                </p>
+              )}
+
+              {/* CONDITION — Dream Journal */}
+              {project.id === 4 && (
+                <p className="text-xs text-[#203270]/60 mb-3 font-roboto bg-[#203270]/5 p-2 rounded">
+                  💡 Créez un compte pour tester l'analyse de rêves par IA
+                </p>
+              )}
+
+              {/* CONDITION — Projets Le Wagon */}
+              {[3, 4, 6, 7, 8].includes(project.id) && (
+                <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                  ✦ Projet Le Wagon
+                </p>
+              )}
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
             </motion.a>
           ))}
         </div>
