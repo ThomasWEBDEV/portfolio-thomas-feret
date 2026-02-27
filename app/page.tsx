@@ -190,28 +190,28 @@ export default function Home() {
 
         {/* Section About */}
         <section id="about" className="mb-32 scroll-mt-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Développeur passionné par la sécurité applicative, je consacre mon temps à apprendre et progresser dans l'univers de la cybersécurité. Ayant suivi une formation intensive au Wagon (RNCP niveau 6), j'ai rapidement orienté mes compétences vers la sécurité des applications et architectures web.
-            </p>
-            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Depuis la fin de ma formation, j'approfondis mes compétences en sécurité sur la stack moderne : React, Next.js, TypeScript, Ruby on Rails et Node.js, avec un focus sur les vulnérabilités OWASP, l'analyse de code sécurisé et les outils DevSecOps.
-            </p>
-            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              Mon engagement et ma rigueur me permettent de livrer des architectures sécurisées et optimisées. Basé en Bretagne et mobile sur Rennes et sa périphérie, je recherche une alternance pour concrétiser mon Mastère en Cybersécurité.
-            </p>
-            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-              L'équipe qui me fera confiance pourra compter sur un investissement total de ma part. Conscient de mon fort potentiel d'évolution, je m'engage à continuer de me former en parallèle pour apporter toujours plus de valeur aux projets.
-            </p>
-            <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
-              En dehors des écrans, je cultive mon équilibre en pratiquant la guitare depuis 16 ans et en profitant des paysages bretons.
-            </p>
-          </motion.div>
+                  <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
+            Développeur passionné par le développement web, je consacre mon temps à apprendre et progresser dans l'univers du full-stack. Ayant suivi une formation intensive au Wagon (RNCP niveau 6), j'ai rapidement consolidé mes compétences sur des applications web modernes, performantes et maintenables.
+          </p>
+          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
+            Depuis la fin de ma formation, j'approfondis ma stack de prédilection : React, Next.js, TypeScript côté front-end, Ruby on Rails et PostgreSQL côté back-end, avec une attention particulière portée à l'architecture, aux bonnes pratiques et à la qualité du code.
+          </p>
+          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
+            Mon engagement et ma rigueur me permettent de livrer des applications optimisées et scalables. Basé en Bretagne et mobile sur Rennes et sa périphérie, je suis ouvert à toute opportunité qui me permettra de contribuer à des projets ambitieux.
+          </p>
+          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
+            L'équipe qui me fera confiance pourra compter sur un investissement total de ma part. Conscient de mon fort potentiel d'évolution, je m'engage à continuer de me former en parallèle pour apporter toujours plus de valeur aux projets.
+          </p>
+          <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
+            En dehors des écrans, je cultive mon équilibre en pratiquant la guitare depuis 16 ans et en profitant des paysages bretons.
+          </p>
+        </motion.div>
         </section>
 
         {/* Section Projects — déplacée avant Experience */}
