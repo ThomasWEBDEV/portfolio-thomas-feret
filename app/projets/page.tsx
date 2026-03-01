@@ -72,11 +72,11 @@ export default function ProjectsPage() {
     },
     {
       id: 7,
-      title: "Manga Watchlist",
-      description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
-      image: "/images/logo6.jpg",
-      link: "https://manga-watch-list-103932ca0caf.herokuapp.com/",
-      tags: ["Ruby on Rails", "CRUD", "Exercice"],
+      title: "Synapse — Enterprise Middleware API",
+      description: "API middleware d'intégration de données entre systèmes d'information (ERP/WMS). Simulation d'infrastructure middleware réelle : API REST Spring Boot, validation/transformation données, dashboard Vue.js monitoring temps réel, containerisation Docker complète. Endpoints testés : /health, /stats, /flux (GET/POST). MySQL pour historique des flux.",
+      image: "/images/synapse.jpg",
+      link: "https://github.com/ThomasWEBDEV/synapse",
+      tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL 8", "Docker", "REST API", "Middleware"],
       year: "2025"
     },
     {
@@ -205,35 +205,35 @@ export default function ProjectsPage() {
               {/* CONDITION — IDS Detection Lab */}
               {project.id === 0 && (
                 <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                  ✦ Projet SOC/Blue Team — Recherche alternance cybersécurité
+                  Projet SOC/Blue Team — Recherche alternance cybersécurité
                 </p>
               )}
 
               {/* CONDITION — ThreatHunter Lab */}
               {project.id === 1 && (
                 <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                  ✦ Projet de démonstration — Candidature Mastère Cybersécurité
+                  Projet de démonstration — Candidature Mastère Cybersécurité
                 </p>
               )}
 
               {/* CONDITION — Digital Forensics Lab */}
               {project.id === 2 && (
                 <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                  ✦ Challenge CyberDefenders BlackEnergy — Score 8/8 (100%)
+                  Challenge CyberDefenders BlackEnergy — Score 8/8 (100%)
                 </p>
               )}
 
               {/* CONDITION — Dream Journal */}
               {project.id === 4 && (
                 <p className="text-xs text-[#203270]/60 mb-3 font-roboto bg-[#203270]/5 p-2 rounded">
-                  💡 Créez un compte pour tester l'analyse de rêves par IA
+                  Créez un compte pour tester l'analyse de rêves par IA
                 </p>
               )}
 
               {/* CONDITION — Projets Le Wagon */}
-              {[3, 4, 6, 7, 8].includes(project.id) && (
+              {[3, 4, 6, 8].includes(project.id) && (
                 <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                  ✦ Projet Le Wagon
+                  Projet Le Wagon
                 </p>
               )}
 
