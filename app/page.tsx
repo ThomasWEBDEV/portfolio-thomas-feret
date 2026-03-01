@@ -293,12 +293,12 @@ export default function Home() {
               },
               {
                 id: 8,
-                title: "Manga Watchlist",
-                description: "Exercice simple réalisé pendant la formation Le Wagon. Application basique de gestion de liste de mangas avec fonctionnalités CRUD. Projet pédagogique pour maîtriser les fondamentaux.",
-                image: "/images/logo6.jpg",
-                link: "https://manga-watch-list-103932ca0caf.herokuapp.com/",
-                tags: ["Ruby on Rails", "CRUD", "Exercice"],
-                stars: "Projet d'apprentissage"
+                title: "Synapse — Enterprise Middleware API",
+                description: "API middleware d'intégration de données entre systèmes (ERP/WMS). Architecture Spring Boot + Vue.js + MySQL + Docker. API REST testée, dashboard monitoring temps réel, containerisation complète.",
+                image: "/images/synapse.jpg",
+                link: "https://github.com/ThomasWEBDEV/synapse",
+                tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL", "Docker", "REST API"],
+                stars: "Projet professionnel"
               },
             ].map((project, index) => (
               <motion.a
