@@ -36,6 +36,33 @@ export default function ProjectsPage() {
     },
     {
       id: 3,
+      title: "Synapse — Enterprise Middleware API",
+      description: "API middleware d'intégration de données entre systèmes d'information (ERP/WMS). Simulation d'infrastructure middleware réelle : API REST Spring Boot, validation/transformation données, dashboard Vue.js monitoring temps réel, containerisation Docker complète. Endpoints testés : /health, /stats, /flux (GET/POST). MySQL pour historique des flux.",
+      image: "/images/synapse.jpg",
+      link: "https://github.com/ThomasWEBDEV/synapse",
+      tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL 8", "Docker", "REST API", "Middleware"],
+      year: "2025"
+    },
+    {
+      id: 4,
+      title: "Agrégateur d'Actualités IA",
+      description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
+      image: "/images/logo4.jpg",
+      link: "https://actu-ia-da62affe5174.herokuapp.com/",
+      tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
+      year: "2025"
+    },
+    {
+      id: 5,
+      title: "E-commerce avec Paiement Intégré",
+      description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
+      image: "/images/logo7.jpg",
+      link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
+      tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
+      year: "2025"
+    },
+    {
+      id: 6,
       title: "GardenBnB",
       description: "Clone d'Airbnb développé en équipe pendant la formation Le Wagon. Lead développeur sur ce projet collaboratif. Gestion complète des annonces, utilisateurs et réservations avec carte interactive.",
       image: "/images/logo2.jpg",
@@ -50,42 +77,6 @@ export default function ProjectsPage() {
       image: "/images/logo3.jpg",
       link: "https://dreamlog-45cf91224f2e.herokuapp.com/",
       tags: ["Ruby on Rails", "API", "IA", "Lead Dev"],
-      year: "2025"
-    },
-    {
-      id: 5,
-      title: "Agrégateur d'Actualités IA",
-      description: "Agrégateur d'actualités IA avec Next.js 15, TypeScript, Docker et OpenAI. Interface moderne avec résumés automatiques d'articles Reddit/HackerNews.",
-      image: "/images/logo4.jpg",
-      link: "https://actu-ia-da62affe5174.herokuapp.com/",
-      tags: ["Next.js 15", "TypeScript", "OpenAI", "Docker", "Supabase"],
-      year: "2025"
-    },
-    {
-      id: 6,
-      title: "Recettes de Cuisine",
-      description: "Application de gestion de recettes de cuisine avec création, modification et recherche de recettes. Interface conviviale et intuitive.",
-      image: "/images/logo5.jpg",
-      link: "https://recettes-cuisine-thomas-714e2391e369.herokuapp.com/",
-      tags: ["Ruby on Rails", "Active Record", "CRUD"],
-      year: "2025"
-    },
-    {
-      id: 7,
-      title: "Synapse — Enterprise Middleware API",
-      description: "API middleware d'intégration de données entre systèmes d'information (ERP/WMS). Simulation d'infrastructure middleware réelle : API REST Spring Boot, validation/transformation données, dashboard Vue.js monitoring temps réel, containerisation Docker complète. Endpoints testés : /health, /stats, /flux (GET/POST). MySQL pour historique des flux.",
-      image: "/images/synapse.jpg",
-      link: "https://github.com/ThomasWEBDEV/synapse",
-      tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL 8", "Docker", "REST API", "Middleware"],
-      year: "2025"
-    },
-    {
-      id: 8,
-      title: "E-commerce avec Paiement Intégré",
-      description: "Site de vente en ligne complet avec système de paiement sécurisé. Gestion du catalogue produits, panier d'achat et processus de commande.",
-      image: "/images/logo7.jpg",
-      link: "https://vente-en-ligne-thomas-33c780989c1d.herokuapp.com/",
-      tags: ["Ruby on Rails", "Stripe", "PostgreSQL"],
       year: "2025"
     },
   ];
