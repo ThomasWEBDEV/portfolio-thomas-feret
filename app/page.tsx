@@ -198,7 +198,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <p className="text-[#eae8da]/70 text-base leading-relaxed mb-6 font-roboto">
-              Développeur Full-Stack, ma méthodologie repose sur l’AI-Driven Development : une orchestration
+              Passionné par le développement web, la conception et la sécurisation d'applications, ma méthodologie repose sur l’AI-Driven Development : une orchestration
               avancée des outils d'IA pour compresser des cycles de développement complexes. Cette approche me permet de
               transformer des besoins métiers précis en infrastructures scalables avec
               une efficacité et une précision augmentées.
