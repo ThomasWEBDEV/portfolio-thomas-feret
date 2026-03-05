@@ -110,7 +110,7 @@ export default function ProjectsPage() {
             Tous mes projets
           </h1>
           <p className="text-[#203270]/70 text-lg max-w-2xl font-roboto leading-relaxed mb-6">
-            Une sélection de mes réalisations, du bootcamp Le Wagon à mes projets personnels.
+            Une sélection de mes réalisations.
             Du développement web full-stack aux intégrations d'intelligence artificielle.
           </p>
 
