@@ -221,12 +221,12 @@ export default function Home() {
             {[
               {
                 id: 0,
-                title: "IDS Detection Lab",
-                description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Architecture hybride AWS/Local avec Suricata, ELK Stack. 20,343 événements capturés, 266 alertes détectées, 20+ IPs malveillantes identifiées.",
-                image: "/images/ids-lab.jpg",
-                link: "https://github.com/ThomasWEBDEV/ids-detection-lab",
-                tags: ["AWS EC2", "Suricata 8.0.3", "ELK Stack", "Python", "SOC/Blue Team"],
-                stars: "Projet Cybersécurité Professionnel"
+                title: "Synapse — Enterprise Middleware API",
+                description: "Infrastructure middleware complète d'intégration ERP↔WMS. Backend Spring Boot 3 (Java 21), frontend Vue.js 3, MySQL 8, pipeline Jenkins CI/CD automatisé (build/test/package), déploiement production Google Cloud Run. Simulateurs ERP/WMS développés from scratch. 198 flux générés automatiquement, 9 tests unitaires JUnit 5, containerisation Docker Compose multi-services, 60+ commits atomiques.",
+                image: "/images/synapse.jpg",
+                link: "https://github.com/ThomasWEBDEV/synapse",
+                tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL 8", "Jenkins", "GCP", "Docker", "JUnit 5"],
+                year: "2026"
               },
               {
                 id: 1,
@@ -248,12 +248,12 @@ export default function Home() {
               },
               {
                 id: 3,
-                title: "Synapse — Enterprise Middleware API",
-                description: "API middleware d'intégration de données entre systèmes (ERP/WMS). Architecture Spring Boot + Vue.js + MySQL + Docker. API REST testée, dashboard monitoring temps réel, containerisation complète.",
-                image: "/images/synapse.jpg",
-                link: "https://github.com/ThomasWEBDEV/synapse",
-                tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL", "Docker", "REST API"],
-                stars: "Projet professionnel"
+                title: "IDS Detection Lab",
+                description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Architecture hybride AWS/Local avec Suricata, ELK Stack. 20,343 événements capturés, 266 alertes détectées, 20+ IPs malveillantes identifiées.",
+                image: "/images/ids-lab.jpg",
+                link: "https://github.com/ThomasWEBDEV/ids-detection-lab",
+                tags: ["AWS EC2", "Suricata 8.0.3", "ELK Stack", "Python", "SOC/Blue Team"],
+                stars: "Projet Cybersécurité Professionnel"
               },
               {
                 id: 4,
