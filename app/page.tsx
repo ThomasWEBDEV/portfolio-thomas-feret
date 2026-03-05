@@ -191,25 +191,31 @@ export default function Home() {
 
         {/* Section About */}
         <section id="about" className="mb-32 scroll-mt-32">
-                  <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            Développeur Full-Stack spécialisé Next.js, TypeScript et Node.js. Je conçois des applications web modernes, performantes et maintenables, avec une attention particulière à l'architecture et à la qualité du code.
-          </p>
-          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            J'aime comprendre le besoin, choisir les bons outils et livrer un produit solide. Que ce soit côté front ou back, je m'adapte au contexte technique et aux contraintes du projet.
-          </p>
-          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            Basé en Bretagne, mobile sur Rennes et sa périphérie. Disponible pour des projets ambitieux où je pourrai apporter ma rigueur et mon engagement.
-          </p>
-          <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
-            En dehors du code, je pratique la guitare depuis 16 ans et je profite des paysages bretons.
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-6 font-roboto">
+              Développeur Full-Stack, ma méthodologie repose sur l’AI-Driven Development : une orchestration
+              avancée des outils d'IA pour compresser des cycles de développement complexes. Cette approche me permet de
+              transformer des besoins métiers précis en infrastructures scalables avec
+              une efficacité et une précision augmentées.
+            </p>
+
+            <p className="text-[#eae8da]/70 text-base leading-relaxed mb-6 font-roboto">
+              Mon travail est le fruit d’une profonde fascination pour les langages
+              de programmation. De l'architecture backend au déploiement cloud, je mets
+              ma rigueur au service de projets ambitieux où la qualité du code rencontre
+              l'innovation technologique.
+            </p>
+
+            <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
+              En dehors de cette passion première, je pratique la guitare depuis 16 ans
+              et je profite des paysages bretons.
+            </p>
+          </motion.div>
         </section>
 
         {/* Section Projects — déplacée avant Experience */}
