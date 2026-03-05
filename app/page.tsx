@@ -180,12 +180,11 @@ export default function Home() {
       {/* COLONNE DROITE - SCROLLABLE */}
       <div className="w-full lg:w-1/2 lg:ml-auto overflow-y-auto px-4 lg:pl-12 pt-8 lg:pt-32 pb-16 relative">
 
-        {/* Effet de lueur qui suit la souris - uniquement sur la partie droite */}
+        {/* Effet de lueur qui suit la souris */}
         <div
           className="pointer-events-none fixed inset-0 z-30 transition duration-300"
           style={{
-            background: `radial-gradient(300px at ${mousePosition.x}px ${mousePosition.y}px, rgba(225, 94, 76, 0.15), transparent 80%)`,
-            clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)'
+            background: `radial-gradient(300px at ${mousePosition.x}px ${mousePosition.y}px, rgba(225, 94, 76, 0.15), transparent 80%)`
           }}
         />
 
