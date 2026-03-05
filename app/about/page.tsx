@@ -27,7 +27,7 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section avec notre texte sincère */}
       <section className="max-w-4xl mx-auto px-8 pt-20 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,8 +37,14 @@ export default function AboutPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-[#203270] mb-6 font-roboto">
             À propos de moi
           </h1>
-          <p className="text-[#203270]/70 text-xl font-roboto leading-relaxed">
+          <p className="text-[#203270]/70 text-xl font-roboto leading-relaxed mb-6">
             Développeur Full-Stack passionné, 33 ans, basé en Bretagne et prêt à relever de nouveaux défis.
+          </p>
+          <p className="text-[#203270]/80 text-lg font-roboto leading-relaxed">
+            Passionné par l'informatique depuis mon plus jeune âge, je code parce que j'aime comprendre comment les choses fonctionnent. Ce qui m'anime, c'est autant le résultat que le chemin pour y arriver. Résoudre un bug tenace, découvrir une approche plus élégante, voir un projet passer de l'idée au déploiement. Et recommencer.
+          </p>
+          <p className="text-[#203270]/80 text-lg font-roboto leading-relaxed mt-4">
+            Ce que j'aime dans ce métier, c'est tout ce qu'il reste à explorer. Front, back, cloud, sécu, il y a toujours une techno à découvrir, un concept à creuser. Être en apprentissage permanent, c'est exactement là où je veux être.
           </p>
         </motion.div>
       </section>
@@ -51,52 +57,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-8"
         >
-          {/* Parcours */}
-          <div className="bg-white border-2 border-[#203270]/10 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-[#203270] mb-6 font-roboto">Mon Parcours</h2>
-
-            <div className="space-y-4 text-[#203270]/80 font-roboto leading-relaxed">
-              <p>
-                Ma passion pour l'informatique remonte à l'âge de 9 ans avec mon premier ordinateur.
-                Déjà à cette époque, je manipulais des scripts Java pour personnaliser mes jeux vidéo.
-                Cette fascination pour la technologie m'a toujours accompagné, même si mon parcours
-                a emprunté des chemins détournés avant de revenir à cette vocation première.
-              </p>
-
-              <p>
-                Mes capacités au football m'ont d'abord orienté vers une carrière sportive : Ligue de
-                Bretagne puis l'En Avant de Guingamp jusqu'à mes 16 ans. Par la suite, j'ai entrepris
-                des études de médecine par tradition familiale, mais une expérience professionnelle au
-                CHU de Rennes m'a révélé que ce milieu ne correspondait pas à mes aspirations. Je me
-                suis alors réorienté vers deux années en faculté d'économie.
-              </p>
-
-              <p>
-                Pendant 5 ans, j'ai exercé en tant que cooperateur technique, où j'ai eu mes premiers
-                contacts avec le développement : requêtes SQL et scripts d'automatisation. Ces premières
-                immersions techniques ont confirmé mon intérêt pour la programmation, sans toutefois
-                m'offrir la structure d'apprentissage nécessaire.
-              </p>
-
-              <p>
-                Le véritable tournant s'est produit avec ma formation au Wagon, que j'ai financée
-                personnellement (8 500€). Cette immersion intensive a révélé une passion que je
-                n'aurais pas soupçonnée aussi forte. Depuis, je consacre l'essentiel de mon temps
-                à perfectionner mes compétences : lecture technique (Python, Ruby, éco-conception web),
-                projets personnels, veille technologique constante.
-              </p>
-
-              <p className="font-medium text-[#203270] bg-[#203270]/5 p-4 rounded-lg border-l-4 border-[#e15e4c]">
-                À 33 ans, je suis aujourd'hui pleinement investi dans cette reconversion.
-                Je travaille dans un environnement Linux et cherche une entreprise où mettre
-                ma rigueur, ma capacité d'apprentissage rapide et mon engagement au service
-                de projets ambitieux. Mon objectif : atteindre un niveau senior dans les
-                meilleurs délais grâce à un travail constant et méthodique.
-              </p>
-            </div>
-          </div>
-
-          {/* Engagement - VERSION OPTIMISÉE */}
+          {/* Ce que j'apporte */}
           <div className="bg-gradient-to-br from-[#e15e4c]/5 to-[#203270]/5 border-2 border-[#e15e4c]/20 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-[#203270] mb-4 font-roboto">Ce que j'apporte</h2>
             <div className="space-y-3 text-[#203270]/80 font-roboto leading-relaxed">
@@ -111,12 +72,11 @@ export default function AboutPage() {
               </p>
               <p className="pt-2 border-t border-[#203270]/10">
                 <span className="font-semibold text-[#203270]">Mobilité :</span> Ouvert à des opportunités sur Rennes et la région parisienne.
-                Prêt à m'adapter à la culture et aux méthodes de l'entreprise qui me fera confiance.
               </p>
             </div>
           </div>
 
-          {/* Localisation - VERSION CONDENSÉE */}
+          {/* Localisation */}
           <div className="bg-white border-2 border-[#203270]/10 rounded-xl p-6">
             <h2 className="text-xl font-bold text-[#203270] mb-3 font-roboto flex items-center gap-2">
               <svg className="w-5 h-5 text-[#e15e4c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,17 +145,14 @@ export default function AboutPage() {
 
           {/* Formation */}
           <div className="bg-white border-2 border-[#203270]/10 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-[#203270] mb-4 font-roboto">Formation & Certification</h2>
+            <h2 className="text-2xl font-bold text-[#203270] mb-4 font-roboto">Formation</h2>
             <div className="space-y-3 text-[#203270]/80 font-roboto">
               <p className="leading-relaxed">
                 <span className="font-semibold text-[#203270]">Le Wagon</span> - Bootcamp Développeur Web Full-Stack
                 <br />
                 <span className="text-sm">Certification RNCP Niveau 6 (Concepteur Développeur d'Applications)</span>
                 <br />
-                <span className="text-sm text-[#203270]/60">Formation intensive de 6 mois - 2025</span>
-              </p>
-              <p className="text-sm italic">
-                Formation autofinancée (8 500€), avec possibilité de programmes complémentaires pour continuer ma montée en compétences.
+                <span className="text-sm text-[#203270]/60">Formation intensive - 2025</span>
               </p>
             </div>
           </div>
