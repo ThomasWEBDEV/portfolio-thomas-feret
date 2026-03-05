@@ -81,38 +81,38 @@ export default function Header() {
               />
             </svg>
 
-            {/* Cercle magnétique avec nouvelles couleurs */}
+            {/* Cercle magnétique avec hamburger à l'intérieur */}
             <motion.div
-              className="absolute inset-0 bg-[#e15e4c] rounded-full"
+              className="absolute inset-0 bg-[#e15e4c] rounded-full flex items-center justify-center"
               style={{
                 x: useTransform(x, (value) => (value - windowWidth + 100) * 0.02),
                 y: useTransform(y, (value) => (value - 100) * 0.02),
               }}
-            />
-
-            {/* Lignes du menu burger */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none">
-              <motion.span
-                animate={{
-                  rotate: isExpanded ? 45 : 0,
-                  y: isExpanded ? 0 : -8,
-                }}
-                className="w-8 h-0.5 bg-[#eae8da] block"
-              />
-              <motion.span
-                animate={{
-                  opacity: isExpanded ? 0 : 1,
-                }}
-                className="w-8 h-0.5 bg-[#eae8da] block mt-2"
-              />
-              <motion.span
-                animate={{
-                  rotate: isExpanded ? -45 : 0,
-                  y: isExpanded ? -10 : 0,
-                }}
-                className="w-8 h-0.5 bg-[#eae8da] block mt-2"
-              />
-            </div>
+            >
+              {/* Lignes du menu burger */}
+              <div className="flex flex-col justify-center items-center">
+                <motion.span
+                  animate={{
+                    rotate: isExpanded ? 45 : 0,
+                    y: isExpanded ? 0 : -8,
+                  }}
+                  className="w-8 h-0.5 bg-[#eae8da] block"
+                />
+                <motion.span
+                  animate={{
+                    opacity: isExpanded ? 0 : 1,
+                  }}
+                  className="w-8 h-0.5 bg-[#eae8da] block mt-2"
+                />
+                <motion.span
+                  animate={{
+                    rotate: isExpanded ? -45 : 0,
+                    y: isExpanded ? -10 : 0,
+                  }}
+                  className="w-8 h-0.5 bg-[#eae8da] block mt-2"
+                />
+              </div>
+            </motion.div>
 
             {/* Pulsation au hover */}
             <motion.div
