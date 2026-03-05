@@ -20,10 +20,11 @@ export default function Home() {
     };
   }, []);
 
+  // ====== MODIFIÉ : Navigation vers des PAGES dédiées (plus d'ancres #) ======
   const navLinks = [
-    { href: "#about", label: "ABOUT", description: "En savoir plus sur moi" },
-    { href: "#projects", label: "PROJECTS", description: "Mes réalisations" },
-    { href: "#experience", label: "EXPERIENCE", description: "Mon parcours professionnel" },
+    { href: "/about", label: "ABOUT", description: "En savoir plus sur moi" },
+    { href: "/projets", label: "PROJECTS", description: "Mes réalisations" },
+    { href: "/contact", label: "CONTACT", description: "Me contacter" },
   ];
 
   const socialLinks = [
@@ -79,10 +80,10 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Navigation avec tirets */}
+          {/* Navigation avec tirets — MODIFIÉ : utilise <Link> au lieu de <a> */}
           <nav className="space-y-6 mb-16">
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onMouseEnter={() => setHoveredLink(link.href)}
@@ -123,7 +124,7 @@ export default function Home() {
                     </motion.p>
                   </div>
                 </motion.div>
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -197,19 +198,16 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            Développeur passionné par le développement web, je consacre mon temps à apprendre et progresser dans l'univers du full-stack. Ayant suivi une formation intensive au Wagon (RNCP niveau 6), j'ai rapidement consolidé mes compétences sur des applications web modernes, performantes et maintenables.
+            Développeur Full-Stack spécialisé Next.js, TypeScript et Node.js. Je conçois des applications web modernes, performantes et maintenables, avec une attention particulière à l'architecture et à la qualité du code.
           </p>
           <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            Depuis la fin de ma formation, j'approfondis ma stack de prédilection : React, Next.js, TypeScript côté front-end, Ruby on Rails et PostgreSQL côté back-end, avec une attention particulière portée à l'architecture, aux bonnes pratiques et à la qualité du code.
+            J'aime comprendre le besoin, choisir les bons outils et livrer un produit solide. Que ce soit côté front ou back, je m'adapte au contexte technique et aux contraintes du projet.
           </p>
           <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            Mon engagement et ma rigueur me permettent de livrer des applications optimisées et scalables. Basé en Bretagne et mobile sur Rennes et sa périphérie, je suis ouvert à toute opportunité qui me permettra de contribuer à des projets ambitieux.
-          </p>
-          <p className="text-[#eae8da]/70 text-base leading-relaxed mb-4 font-roboto">
-            L'équipe qui me fera confiance pourra compter sur un investissement total de ma part. Conscient de mon fort potentiel d'évolution, je m'engage à continuer de me former en parallèle pour apporter toujours plus de valeur aux projets.
+            Basé en Bretagne, mobile sur Rennes et sa périphérie. Disponible pour des projets ambitieux où je pourrai apporter ma rigueur et mon engagement.
           </p>
           <p className="text-[#eae8da]/70 text-base leading-relaxed font-roboto">
-            En dehors des écrans, je cultive mon équilibre en pratiquant la guitare depuis 16 ans et en profitant des paysages bretons.
+            En dehors du code, je pratique la guitare depuis 16 ans et je profite des paysages bretons.
           </p>
         </motion.div>
         </section>
@@ -354,68 +352,6 @@ export default function Home() {
               </svg>
             </Link>
           </motion.div>
-        </section>
-
-        {/* Section Experience — déplacée après Projects */}
-        <section id="experience" className="scroll-mt-32">
-          <h3 className="text-[#eae8da] text-sm font-bold tracking-widest mb-8 font-roboto">PARCOURS</h3>
-          <div className="space-y-12">
-            {[
-              {
-                year: "SEPT — DÉC 2025",
-                title: "Spécialisation Back-End Autonome",
-                company: "Formation Continue",
-                description: "Approfondissement des technologies back-end modernes avec Node.js, TypeScript et Express. Développement d'applications web full-stack et architecture serveur.",
-                tags: ["Node.js", "TypeScript", "Express"]
-              },
-              {
-                year: "AOÛT 2025",
-                title: "Titre RNCP Niveau 6",
-                company: "Concepteur Développeur d'Applications",
-                description: "Certification professionnelle validant les compétences en conception et développement d'applications web complètes.",
-                tags: ["RNCP 6", "Full-stack", "Architecture"]
-              },
-              {
-                year: "FÉV — AOÛT 2025",
-                title: "Formation Développeur Web Full-stack",
-                company: "Le Wagon",
-                description: "Bootcamp intensif de développement web. Apprentissage des fondamentaux du développement full-stack et réalisation de projets concrets en équipe.",
-                tags: ["Ruby on Rails", "JavaScript", "React"]
-              },
-            ].map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="grid grid-cols-4 gap-4">
-                  <div className="col-span-1">
-                    <p className="text-xs text-[#eae8da]/50 font-roboto font-semibold tracking-wide">
-                      {exp.year}
-                    </p>
-                  </div>
-                  <div className="col-span-3">
-                    <h4 className="text-[#eae8da] font-medium mb-1 group-hover:text-[#e15e4c] transition-colors font-roboto">
-                      {exp.title} · {exp.company}
-                    </h4>
-                    <p className="text-[#eae8da]/60 text-sm mb-3 font-roboto leading-relaxed">
-                      {exp.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.tags.map((tag, i) => (
-                        <span key={i} className="text-xs px-3 py-1 rounded-full bg-[#e15e4c]/10 text-[#e15e4c] border border-[#e15e4c]/20 font-roboto">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </section>
 
         {/* Footer */}
