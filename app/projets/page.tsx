@@ -9,13 +9,14 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 0,
-      title: "IDS Detection Lab",
-      description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Infrastructure hybride cloud/on-premise optimisée (0€). Déploiement Suricata 8.0.3 (48,199 règles ET), Stack ELK 8.19 complète. Résultats : 20,343 événements en 22h, 266 alertes, 20+ IPs malveillantes (6 pays), scans SSH, IPs blacklistées.",
-      image: "/images/ids-lab.jpg",
-      link: "https://github.com/ThomasWEBDEV/ids-detection-lab",
-      tags: ["AWS EC2", "Suricata 8.0.3", "Elasticsearch", "Logstash", "Kibana", "Python", "Fail2ban", "SOC"],
-      year: "2025"
+      title: "Synapse — Enterprise Middleware API",
+      description: "Infrastructure middleware complète d'intégration ERP↔WMS. Backend Spring Boot 3 (Java 21), frontend Vue.js 3, MySQL 8, pipeline Jenkins CI/CD automatisé (build/test/package), déploiement production Google Cloud Run. Simulateurs ERP/WMS développés from scratch. 198 flux générés automatiquement, 9 tests unitaires JUnit 5, containerisation Docker Compose multi-services, 60+ commits atomiques.",
+      image: "/images/synapse.jpg",
+      link: "https://github.com/ThomasWEBDEV/synapse",
+      tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL 8", "Jenkins", "GCP", "Docker", "JUnit 5"],
+      year: "2026"
     },
+
     {
       id: 1,
       title: "ThreatHunter Lab",
@@ -36,11 +37,11 @@ export default function ProjectsPage() {
     },
     {
       id: 3,
-      title: "Synapse — Enterprise Middleware API",
-      description: "API middleware d'intégration de données entre systèmes d'information (ERP/WMS). Simulation d'infrastructure middleware réelle : API REST Spring Boot, validation/transformation données, dashboard Vue.js monitoring temps réel, containerisation Docker complète. Endpoints testés : /health, /stats, /flux (GET/POST). MySQL pour historique des flux.",
-      image: "/images/synapse.jpg",
-      link: "https://github.com/ThomasWEBDEV/synapse",
-      tags: ["Java 21", "Spring Boot 3", "Vue.js 3", "MySQL 8", "Docker", "REST API", "Middleware"],
+      title: "IDS Detection Lab",
+      description: "Système de détection d'intrusion avec analyse temps réel des menaces réseau. Infrastructure hybride cloud/on-premise optimisée (0€). Déploiement Suricata 8.0.3 (48,199 règles ET), Stack ELK 8.19 complète. Résultats : 20,343 événements en 22h, 266 alertes, 20+ IPs malveillantes (6 pays), scans SSH, IPs blacklistées.",
+      image: "/images/ids-lab.jpg",
+      link: "https://github.com/ThomasWEBDEV/ids-detection-lab",
+      tags: ["AWS EC2", "Suricata 8.0.3", "Elasticsearch", "Logstash", "Kibana", "Python", "Fail2ban", "SOC"],
       year: "2025"
     },
     {
@@ -71,7 +72,7 @@ export default function ProjectsPage() {
       year: "2025"
     },
     {
-      id: 4,
+      id: 7,
       title: "Dream Journal & Analyzer",
       description: "Projet de fin de formation développé en équipe de 3 développeurs. Lead technique du projet. Application d'analyse et de suivi de rêves avec intelligence artificielle pour interpréter et catégoriser les rêves automatiquement.",
       image: "/images/logo3.jpg",
@@ -193,10 +194,10 @@ export default function ProjectsPage() {
                 {project.description}
               </p>
 
-              {/* CONDITION — IDS Detection Lab */}
+              {/* CONDITION — Synapse */}
               {project.id === 0 && (
                 <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
-                  Projet SOC/Blue Team — Recherche alternance cybersécurité
+                  Projet full-stack professionnel — CI/CD + Cloud deployment
                 </p>
               )}
 
@@ -214,15 +215,22 @@ export default function ProjectsPage() {
                 </p>
               )}
 
+              {/* CONDITION — IDS Detection Lab */}
+              {project.id === 3 && (
+                <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
+                  Projet SOC/Blue Team — Recherche alternance cybersécurité
+                </p>
+              )}
+
               {/* CONDITION — Dream Journal */}
-              {project.id === 4 && (
+              {project.id === 7 && (
                 <p className="text-xs text-[#203270]/60 mb-3 font-roboto bg-[#203270]/5 p-2 rounded">
                   Créez un compte pour tester l'analyse de rêves par IA
                 </p>
               )}
 
               {/* CONDITION — Projets Le Wagon */}
-              {[3, 4, 6, 8].includes(project.id) && (
+              {[5, 6, 7].includes(project.id) && (
                 <p className="text-xs text-[#e15e4c] mb-3 font-roboto italic">
                   Projet Le Wagon
                 </p>
